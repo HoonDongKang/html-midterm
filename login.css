@@ -1,100 +1,100 @@
 html {
-  background-color: #8bb174;
+    background-color: #def7e3;
 }
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .picture {
-  border: 1px solid black;
-  border-radius: 100px;
+    border: 1px solid black;
+    border-radius: 100px;
 }
 
 .divContainer {
-  min-height: 100vh;
-  position: relative;
-  width: 100%;
-  padding: 8px;
-  margin: 0;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 8px;
+    margin: 0;
 }
 
 .loginContainer {
-  margin: 100px auto;
+    margin: 100px auto;
 }
 
 .loginForm {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  background-color: #dce7d5;
-  width: 392px;
-  padding: 16px 32px;
-  margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 255, 157, 0.288);
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    width: 392px;
+    padding: 16px 32px;
+    margin: auto;
 }
 
 .picture > img {
-  margin: auto;
-  display: block;
-  width: 30%;
+    margin: auto;
+    display: block;
+    width: 30%;
 }
 #firstFormDiv {
-  display: block;
+    display: block;
 }
 #secondFormDiv {
-  display: none;
+    display: none;
 }
 
 #firstFormDiv > label,
 #secondFormDiv > label {
-  display: block;
-  margin: 10px 0 5px 0;
-  font-size: 14px;
+    display: block;
+    margin: 10px 0 5px 0;
+    font-size: 14px;
 }
 
 .checkPw {
-  display: inline-block;
-  margin-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 #userPwC {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 #pwbtn {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 #pwMsg {
-  display: inline;
-  font-size: 12px;
-  margin-left: 15px;
+    display: inline;
+    font-size: 12px;
+    margin-left: 15px;
 }
 #country {
-  display: block;
-  width: 150px;
-  border: 1px solid #c4c4c4;
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding: 12px 13px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+    display: block;
+    width: 150px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 12px 13px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
 }
 #submitBtn {
-  float: right;
-  background-color: white;
-  border: 2px solid #222e50;
-  color: #395f5d;
-  font-weight: bolder;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    float: right;
+    background-color: white;
+    border: 2px solid #222e50;
+    color: #395f5d;
+    font-weight: bolder;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 #submitBtn:hover {
-  background-color: #a4ebd394;
+    background-color: #a4ebd394;
 }
 #userId,
 #userPw,
@@ -102,49 +102,49 @@ body {
 #userEmail,
 #userName,
 #userNumber {
-  height: 15xpx;
-  border-radius: 3px;
-  border: 1px solid #d4d4d4;
-  padding: 8px;
-  display: block;
-  width: 80%;
-  line-height: 1.42857143;
-  background-color: #fafafa;
+    height: 15xpx;
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;
+    padding: 8px;
+    display: block;
+    width: 80%;
+    line-height: 1.42857143;
+    background-color: #fafafa;
 }
 #pwbtn {
-  background-color: white;
-  border: 1px solid #426b69;
-  color: #426b69;
-  font-weight: bolder;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    border: 1px solid #426b69;
+    color: #426b69;
+    font-weight: bolder;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #pwbtn:hover {
-  background-color: #dbf1b3;
+    background-color: #dbf1b3;
 }
 
 #showBtn {
-  background-color: white;
-  border: 2px solid #33477d;
-  color: #222e50;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: bolder;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    border: 2px solid #33477d;
+    color: #222e50;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #showBtn:hover {
-  background-color: #a4ebd394;
+    background-color: #a4ebd394;
 }
