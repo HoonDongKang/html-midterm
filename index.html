@@ -14,7 +14,11 @@
             <nav class="header">
                 <div>
                     <div class="logo">
-                        <a href="./index.html">
+                        <a
+                            id="logoTag"
+                            onclick="changeHref()"
+                            style="cursor: pointer"
+                        >
                             <img
                                 src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
                             />
@@ -24,7 +28,7 @@
                         <div class="AboutMe">
                             <button class="AboutMebtn">Aboutme</button>
                             <div class="dropdown-content">
-                                <li href="#div1">자기소개</li>
+                                <li href="#">자기소개</li>
                                 <li href="#">시간표</li>
                                 <li href="#">롤모델</li>
                             </div>
@@ -57,9 +61,7 @@
                         </div>
                     </div>
                     <div class="account">
-                        <div>
-                            <p>안녕하세요</p>
-                        </div>
+                        <div><p id="userTag">gd</p></div>
                     </div>
                 </div>
             </nav>
