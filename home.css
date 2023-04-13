@@ -1,0 +1,133 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.body {
+  margin-top: 100px;
+  height: 100%;
+}
+.header {
+  background-color: transparent;
+  padding: 4px 8px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav > div {
+  display: flex;
+}
+
+.logo > a > img {
+  margin: auto;
+  display: block;
+  width: 230px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.logo,
+.menu,
+.account {
+  flex: 1;
+}
+.AboutMe,
+.CSS,
+.HTML,
+.JavaScript {
+  flex: 1;
+}
+.AboutMe .AboutMebtn,
+.HTML .HTMLbtn,
+.CSS .CSSbtn,
+.JavaScript .JavaScriptbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: rgb(83, 104, 93);
+  background-color: transparent;
+  padding: 14px 16px;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+.AboutMe .AboutMebtn:hover,
+.HTML .HTMLbtn:hover,
+.CSS .CSSbtn:hover,
+.JavaScript .JavaScriptbtn:hover {
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+.AboutMe:hover .dropdown-content,
+.HTML:hover .dropdown-content,
+.CSS:hover .dropdown-content,
+.JavaScript:hover .dropdown-content {
+  display: block;
+}
+
+.account {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.account div {
+  text-align: center;
+}
+
+.bodyContainer {
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  background-color: aliceblue;
+}
+
+#me {
+  height: 500px;
+  background-color: aquamarine;
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+}
+
+#me div {
+  flex: 1;
+}
+
+#profileImg {
+  width: 30%;
+}
+#timeTable {
+  background-color: blueviolet;
+}
+#roleModel {
+  background-color: crimson;
+}
