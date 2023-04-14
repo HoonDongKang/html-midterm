@@ -1,182 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강동훈(2017H1102)</title>
-    <link rel="stylesheet" href="./home.css" />
-    <script src="indexFunc.js" defer></script>
-  </head>
-  <body>
-    <div class="body">
-      <nav class="header">
-        <div>
-          <div class="logo">
-            <a id="logoTag" onclick="changeHref()" style="cursor: pointer">
-              <img
-                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
-              />
-            </a>
-          </div>
-          <div class="menu">
-            <div class="AboutMe">
-              <button class="AboutMebtn">Aboutme</button>
-              <div class="dropdown-content">
-                <li href="#">자기소개</li>
-                <li href="#">시간표</li>
-                <li href="#">롤모델</li>
-              </div>
-            </div>
-            <div class="HTML">
-              <button class="HTMLbtn">HTML</button>
-              <div class="dropdown-content">
-                <li href="#">HTML?</li>
-                <li href="#">Basig Tag</li>
-                <li href="#">List Tag</li>
-                <li href="#">Table Tag</li>
-                <li href="#">Form Tag</li>
-                <li href="#">Media Tag</li>
-              </div>
-            </div>
-            <div class="CSS">
-              <button class="CSSbtn">CSS</button>
-              <div class="dropdown-content">
-                <li href="#">CSS</li>
-                <li href="#">SELECTOR</li>
-              </div>
-            </div>
-            <div class="JavaScript">
-              <button class="JavaScriptbtn">JavaScript</button>
-              <div class="dropdown-content">
-                <li href="#">Link 1</li>
-                <li href="#">Link 2</li>
-                <li href="#">Link 3</li>
-              </div>
-            </div>
-          </div>
-          <div class="account">
-            <div><p id="userTag"></p></div>
-          </div>
-        </div>
-      </nav>
-      ,
-      <div class="bodyContainer">
-        <div id="me" class="container">
-          <div class="imgContainer">
-            <img
-              id="profileImg"
-              src="https://user-images.githubusercontent.com/102861831/230270533-edf78262-87d2-4811-927e-f2f25ea0f966.png"
-            />
-          </div>
-          <div class="infoContainer">
-            <div>
-              <h3>이름</h3>
-              <p>강동훈</p>
-            </div>
-            <div>
-              <h3>취미</h3>
-              <p>축구, 농구, 배드민턴, 독서, 코딩/p></p>
-            </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>강동훈(2017H1102)</title>
+        <link rel="stylesheet" href="./home.css" />
+        <script src="indexFunc.js" defer></script>
+    </head>
+    <body>
+        <div class="body">
+            <nav class="header">
+                <div>
+                    <div class="logo">
+                        <a
+                            id="logoTag"
+                            onclick="changeHref()"
+                            style="cursor: pointer"
+                        >
+                            <img
+                                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
+                            />
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <div class="AboutMe">
+                            <button class="AboutMebtn">Aboutme</button>
+                            <div class="dropdown-content">
+                                <li href="#">자기소개</li>
+                                <li href="#">시간표</li>
+                                <li href="#">롤모델</li>
+                            </div>
+                        </div>
+                        <div class="HTML">
+                            <button class="HTMLbtn">HTML</button>
+                            <div class="dropdown-content">
+                                <li href="#">HTML?</li>
+                                <li href="#">Basig Tag</li>
+                                <li href="#">List Tag</li>
+                                <li href="#">Table Tag</li>
+                                <li href="#">Form Tag</li>
+                                <li href="#">Media Tag</li>
+                            </div>
+                        </div>
+                        <div class="CSS">
+                            <button class="CSSbtn">CSS</button>
+                            <div class="dropdown-content">
+                                <li href="#">CSS</li>
+                                <li href="#">SELECTOR</li>
+                            </div>
+                        </div>
+                        <div class="JavaScript">
+                            <button class="JavaScriptbtn">JavaScript</button>
+                            <div class="dropdown-content">
+                                <li href="#">Link 1</li>
+                                <li href="#">Link 2</li>
+                                <li href="#">Link 3</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div><p id="userTag"></p></div>
+                    </div>
+                </div>
+            </nav>
+            ,
+            <div class="bodyContainer">
+                <div id="me" class="container">
+                    <div class="imgContainer">
+                        <img
+                            id="profileImg"
+                            src="https://user-images.githubusercontent.com/102861831/230270533-edf78262-87d2-4811-927e-f2f25ea0f966.png"
+                        />
+                    </div>
+                    <div class="infoContainer">
+                        <div id="name">
+                            <h3>이름</h3>
+                            <p>강동훈</p>
+                        </div>
+                        <div id="hobby">
+                            <h3>취미</h3>
+                            <ul>
+                                <li>
+                                    운동은 축구, 농구, 배드민턴을 가장
+                                    즐겨해요.<br />
+                                </li>
+                                <br />
+                                <li>
+                                    조용한 카페에서 독서하는 것을 좋아하며,
+                                    <br />주로 철학, 자기계발, 인문학에 관한
+                                    책을 읽어요. <br />가장 좋아하는 책은
+                                    <i>마이클 샌델의 <정의란 무엇인가></i> 에요.
+                                </li>
+                                <br />
+                                <li>
+                                    헤드폰으로 좋아하는 노래를 감상하며 코딩하는
+                                    것을 좋아해요
+                                    <br />
+                                    주로 재즈나 R&B 장르의 노래를 즐겨 들어요.
+                                </li>
+                                <br />
+                                <li>
+                                    요즘은 영작문 실력을 살리고자,
+                                    <br />즐겨읽던 책의 영어 원서를 읽거나
+                                    <br />
+                                    다양한 포스팅 및 문서를 원문으로 읽으려
+                                    <br />
+                                    노력하고 있어요.
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="job">
+                            <h3>직업</h3>
+                            <p>Node.js 백앤드 개발자</p>
+                            <h3>스택</h3>
+                            <ul>
+                                <li>JavaScript <br />TypeScript</li>
+                                <br />
+                                <li>Node.js<br />Express.js<br />Nest.js</li>
+                                <br />
+                                <li>MySQL, Postgresql</li>
+                                <br />
+                                <li>TypeORM, Prisma</li>
+                                <br />
+                            </ul>
+                            <p>+) 즐거울 정도의 React</p>
+                        </div>
+                        <div id="intro">
+                            <h3>자기소개</h3>
+                            <p>
+                                코드 한 줄이 나를 증명하는 개발자, 강동훈입니다.
+                            </p>
 
-            <div>
-              <h3>직업</h3>
-              <p>Node.js 백앤드 개발자</p>
+                            <a href="https://github.com/HoonDongKang">Github</a>
+                            <a href="https://velog.io/@d159123">Velog</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="timeTable" class="container">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">09:00~10:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:00~11:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">11:00~12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">12:00~13:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="2" class="firstClass">
+                                    영작문지도
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time">13:00~14:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">14:00~15:00</td>
+                                <td class="secondClass">영상자료</td>
+                                <td class="firstClass">영작문지도</td>
+                                <td></td>
+                                <td class="thirdClass">음악의 이해</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:00~16:00</td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="3" class="fourthClass">
+                                    자바스크립트
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">16:00~17:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">17:00~18:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="roleModel" class="container">롤모델</div>
             </div>
-            <div>
-              <h3>자기소개</h3>
-              <p>코드 한 줄이 저를 증명하는 개발자, 강동훈입니다.</p>
-            </div>
-          </div>
         </div>
-        <div id="timeTable" class="container">
-          <table>
-            <thead>
-              <tr>
-                <th>시간</th>
-                <th>월</th>
-                <th>화</th>
-                <th>수</th>
-                <th>목</th>
-                <th>금</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00~10:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>10:00~11:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>11:00~12:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>12:00~13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td rowspan="2">영작문지도</td>
-              </tr>
-              <tr>
-                <td>13:00~14:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>14:00~15:00</td>
-                <td>영상자료</td>
-                <td>영작문지도</td>
-                <td></td>
-                <td>음악의 이해</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>15:00~16:00</td>
-                <td></td>
-                <td></td>
-                <td rowspan="3">자바스크립트</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>16:00~17:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>17:00~18:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="roleModel" class="container">롤모델</div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
 <!-- src="https://user-images.githubusercontent.com/102861831/230270533-edf78262-87d2-4811-927e-f2f25ea0f966.png" -->
