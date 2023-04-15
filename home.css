@@ -119,16 +119,19 @@ nav > div {
   margin: 40px auto;
 }
 
-#me {
+#me,
+#roleModel {
   width: 60%;
   display: flex;
 }
 
-#me div {
+#me div,
+#roleModel div {
   flex: 1;
 }
 
-.imgContainer {
+.imgContainer,
+.modelContainer {
   min-width: 300px;
 }
 
@@ -188,7 +191,7 @@ h3 {
   background-color: transparent;
 }
 #roleModel {
-  background-color: crimson;
+  background-color: cornsilk;
 }
 
 table {
@@ -215,4 +218,14 @@ table > thead {
 }
 .fourthClass {
   background-color: rgb(227, 170, 241);
+}
+.modelContainer img {
+  display: block;
+  margin: auto;
+}
+.reasonContainer {
+  border: 1px solid black;
+  font-weight: bolder;
+  font-size: 100px;
+  color: blueviolet;
 }
