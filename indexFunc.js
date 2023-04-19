@@ -30,7 +30,7 @@ jsHref = () => {
     jsBtn.href = `./js.html?name=${userName}`
 }
 const containerList = document.querySelectorAll('.container')
-const links = document.querySelectorAll('li')
+const links = document.querySelectorAll('.floating')
 let containerOffsetTopList = []
 
 for (let container of containerList) {
