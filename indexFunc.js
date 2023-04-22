@@ -6,41 +6,41 @@ nameTag.innerHTML = `<span style="color:red; font-weight:bold; font-size:24px">$
 
 //logo a tag
 logoHref = () => {
-    const logoTag = document.getElementById('logoTag')
-    logoTag.href = `./home.html?name=${userName}`
+  const logoTag = document.getElementById('logoTag')
+  logoTag.href = `./home.html?name=${userName}`
 }
 
 aboutMeHref = () => {
-    const aboutMeBtn = document.getElementById('AboutMebtn')
-    aboutMeBtn.href = `./home.html?name=${userName}`
+  const aboutMeBtn = document.getElementById('AboutMebtn')
+  aboutMeBtn.href = `./home.html?name=${userName}`
 }
 
 htmlHref = () => {
-    const htmlBtn = document.getElementById('HTMLbtn')
-    htmlBtn.href = `./html.html?name=${userName}`
+  const htmlBtn = document.getElementById('HTMLbtn')
+  htmlBtn.href = `./html.html?name=${userName}`
 }
 
 cssHref = () => {
-    const cssBtn = document.getElementById('CSSbtn')
-    cssBtn.href = `./css.html?name=${userName}`
+  const cssBtn = document.getElementById('CSSbtn')
+  cssBtn.href = `./css.html?name=${userName}`
 }
 
 jsHref = () => {
-    const jsBtn = document.getElementById('JavaScriptbtn')
-    jsBtn.href = `./js.html?name=${userName}`
+  const jsBtn = document.getElementById('JavaScriptbtn')
+  jsBtn.href = `./js.html?name=${userName}`
 }
 const containerList = document.querySelectorAll('.container')
 const links = document.querySelectorAll('.floating')
 let containerOffsetTopList = []
 
 for (let container of containerList) {
-    containerOffsetTopList.push(container.offsetTop)
+  containerOffsetTopList.push(container.offsetTop)
 }
 for (let i = 0; i < links.length; i++) {
-    links[i].onclick = () => {
-        window.scroll({
-            top: containerOffsetTopList[i] - 200,
-            behavior: 'smooth',
-        })
-    }
+  links[i].onclick = () => {
+    window.scroll({
+      top: containerOffsetTopList[i] - 200,
+      behavior: 'smooth',
+    })
+  }
 }
