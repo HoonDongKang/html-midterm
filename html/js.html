@@ -1,60 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>강동훈(2017H1102)</title>
-        <link rel="stylesheet" href="../css/home.css" />
-        <script src="../indexFunc.js" defer></script>
-    </head>
-    <body>
-        <div class="body">
-            <nav class="floating-menu">
-                <h3>바로가기</h3>
-                <li href="#" class="floating">Javascript?</li>
-                <li href="#" class="floating">Dialog</li>
-                <li href="#" class="floating">Condition</li>
-                <li href="#" class="floating">Looping</li>
-            </nav>
-            <nav class="header">
-                <div>
-                    <div class="logo">
-                        <a
-                            id="logoTag"
-                            onclick="logoHref()"
-                            style="cursor: pointer"
-                        >
-                            <img
-                                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
-                            />
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <div class="AboutMe">
-                            <a id="AboutMebtn" onclick="aboutMeHref()">
-                                Aboutme
-                            </a>
-                        </div>
-                        <div class="HTML">
-                            <a id="HTMLbtn" onclick="htmlHref()">HTML</a>
-                        </div>
-                        <div class="CSS">
-                            <a id="CSSbtn" onclick="cssHref()">CSS</a>
-                        </div>
-                        <div class="JavaScript">
-                            <a id="JavaScriptbtn" onclick="jsHref()"
-                                >JavaScript</a
-                            >
-                        </div>
-                    </div>
-                    <div class="account">
-                        <div><p id="userTag"></p></div>
-                    </div>
-                </div>
-            </nav>
-            <div class="bodyContainer">
-               
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강동훈(2017H1102)</title>
+    <link rel="stylesheet" href="../css/js.css" />
+    <script src="../indexFunc.js" defer></script>
+  </head>
+  <body>
+    <div class="body">
+      <nav class="floating-menu">
+        <h3>바로가기</h3>
+        <li href="#" class="floating">Javascript?</li>
+        <li href="#" class="floating">Dialog</li>
+        <li href="#" class="floating">Condition</li>
+        <li href="#" class="floating">Looping</li>
+      </nav>
+      <nav class="header">
+        <div>
+          <div class="logo">
+            <a id="logoTag" onclick="logoHref()" style="cursor: pointer">
+              <img
+                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
+              />
+            </a>
+          </div>
+          <div class="menu">
+            <div class="AboutMe">
+              <a id="AboutMebtn" onclick="aboutMeHref()"> Aboutme </a>
+            </div>
+            <div class="HTML">
+              <a id="HTMLbtn" onclick="htmlHref()">HTML</a>
+            </div>
+            <div class="CSS">
+              <a id="CSSbtn" onclick="cssHref()">CSS</a>
+            </div>
+            <div class="JavaScript">
+              <a id="JavaScriptbtn" onclick="jsHref()">JavaScript</a>
+            </div>
+          </div>
+          <div class="account">
+            <div><p id="userTag"></p></div>
+          </div>
         </div>
-    </body>
+      </nav>
+      <div class="bodyContainer">
+        <div id="javascript">
+          <div class="title"><h2>자바스크립트언어(JavaScript)</h2></div>
+          <div class="content">
+            <ul>
+              <li>JavaScript</li>
+              <ul>
+                <li>1995년 넷스케이프에서 개발</li>
+                <li>Netscape Navigator 2.0 브라우저에 최초 탑재</li>
+                <li>웹 프로그래밍 개념 창시</li>
+              </ul>
+              <li>특징</li>
+              <ul>
+                <li>HTML 문서에 내장</li>
+                <ul>
+                  <li>조각 소스 코드</li>
+                </ul>
+                <li>스크립트 언어</li>
+                <ul>
+                  <li>인터프리터 실행</li>
+                  <li>컴파일러 필요없음</li>
+                </ul>
+                <li>단순</li>
+                <ul>
+                  <li>C언어 구조를 차용</li>
+                  <li>배우기 쉬움</li>
+                </ul>
+              </ul>
+            </ul>
+
+            <h3>JavaScript Sample</h3>
+
+            <xmp>
+                <html>
+        
+                <head>
+                    <script>
+                        var sum = 0;
+                        for (n = 0; n < 10; n++) {
+                            sum = sum + n;
+                        }
+                        alert("합은 = " + sum);
+                    </script>
+                </head>
+        
+                </html>
+            </xmp>
+          </div>
+          <div class="title">
+            <h2>자바스크립트 코드 작성이 가능한 위치</h2>
+          </div>
+          <div class="content">
+            1. HTML 태그의 이벤트 리스너 속성에 작성<br />
+            2. &lt;script&gt;&lt;/script&gt; 태그에 작성<br />
+            3. 별도 파일에 작성<br />
+            4. URL 부분에 작성<br />
+
+            <h3>JavaScript Sample</h3>
+
+            1. &lt;img src="apple.png" alt="img"
+            onclick="this.src='banana.png'"&gt;
+
+            <br />
+            2. &lt;script&gt; document.write("&lt;h3&gt;유수봉
+            만세&lt;/h3&gt;"); &lt;/script&gt;
+            <br />
+            3. &lt;script src="javascriptfile.js"&gt; &lt;/script&gt;
+            <br />
+            4. &lt;a href= "javascript:alert('클릭하셨어요?')" &gt;
+            클릭해보세요&lt;/a&gt;
+            <br />
+          </div>
+        </div>
+
+        <div id="dialog">
+          <div class="title"><h2>alert 명령어 설명</h2></div>
+          <div class="content">
+            1. alert 는 dialog 창을 열고 메시지를 표시한다.<br />
+            2. 단순히 메시지를 전달하는 기능을 수행한다.&lt;/script&gt;태그에
+            작성<br />
+            3. 사용자의 입력은 확인할 수 없다.<br />
+
+            <h3>alert 연습</h3>
+
+            <xmp
+>
+getAlert = () => {
+    const alertSpan = document.getElementById("alertValue");
+    const alertValue = alert("Alert 버튼을 누루셨습니다.");
+    alertSpan.innerHTML = alertValue;
+    };
+            </xmp>
+
+            <h3>alert 명령 수행 후 반환값</h3>
+            <button onclick="getAlert()">alert 버튼을 클릭하세요</button>
+            <br />
+            <p>alert 값 : <span id="alertValue"></span></p>
+            <hr />
+          </div>
+          <div class="title"><h2>confirm 명령어 설명</h2></div>
+          <div class="content">
+            여기에 confirm 명령을 간단히 설명하시오.
+            <h3>confirm 연습</h3>
+            <xmp
+>
+    getConfirm = () => {
+        const confirmSpan = document.getElementById("confirmValue");
+        confirmSpan.innerHTML = confirmValue;
+        const confirmValue = confirm("Confirm 버튼을 누루셨습니다.");
+    }
+        </xmp
+            >
+
+            <h3>confirm 반환값</h3>
+            <button onclick="getConfirm()">confirm 버튼을 클릭하세요</button>
+            <p>confirm 값 : <span id="confirmValue"></span></p>
+            <hr />
+          </div>
+          <div class="title"><h2>prompt 명령어 설명</h2></div>
+          <div class="content">
+            여기에 prompt 명령을 간단히 설명하시오.
+            <h3>prompt 연습</h3>
+            <xmp
+>
+    getPrompt = () => {
+        const promptSpan = document.getElementById("promptValue");
+        const promptValue = prompt("Prompt 버튼을 누루셨습니다.");
+        promptSpan.innerHTML = promptValue;
+        };
+            </xmp>
+            <h3>prompt 반환값</h3>
+            <button onclick="getPrompt()">prompt 버튼을 클릭하세요</button>
+            <p>prompt 값 : <span id="promptValue"></span></p>
+          </div>
+        </div>
+        <div id="condition">condition</div>
+        <div id="looping">looping</div>
+      </div>
+    </div>
+  </body>
 </html>

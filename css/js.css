@@ -115,3 +115,23 @@ nav > div {
 .bodyContainer > div {
   margin: 40px auto;
 }
+
+#javascript {
+  background-color: antiquewhite;
+}
+#dialog {
+  background-color: honeydew;
+}
+#condition {
+  background-color: rgb(218, 198, 231);
+}
+#looping {
+  background-color: rgb(248, 198, 217);
+}
+
+.title {
+  margin: 30px 0px 0px 30px;
+}
+.content {
+  margin: 0px 0px 0px 30px;
+}
