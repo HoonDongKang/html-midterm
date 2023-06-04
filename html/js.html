@@ -162,7 +162,9 @@ getAlert = () => {
                     </div>
                     <div class="title"><h2>confirm 명령어 설명</h2></div>
                     <div class="content">
-                        여기에 confirm 명령을 간단히 설명하시오.
+                        1. "메시지"를 출력하고 '확인/취소'버튼을 가진 dialog
+                        출력 <br />2. "확인" 버튼을 누르면 true, "취소"버튼을
+                        누르면 false 리턴
                         <h3>confirm 연습</h3>
                         <xmp
 >
@@ -183,7 +185,7 @@ getAlert = () => {
                     </div>
                     <div class="title"><h2>prompt 명령어 설명</h2></div>
                     <div class="content">
-                        여기에 prompt 명령을 간단히 설명하시오.
+                        사용자로부터 문자열을 입력받아 리턴
                         <h3>prompt 연습</h3>
                         <xmp
 >
@@ -201,8 +203,149 @@ getAlert = () => {
                         <p>prompt 값 : <span id="promptValue"></span></p>
                     </div>
                 </div>
-                <div id="condition">condition</div>
-                <div id="looping">looping</div>
+                <div id="condition">
+                    <div class="title"><h2>if~else 명령어 설명</h2></div>
+                    <div class="content">
+                        if - 조건에 맞는 명령문을 실행 <br />
+                        if ~ else - 한 개 이상의 조건을 설정하여 그에 맞는
+                        명령문 실행
+                        <h3>if~else 연습</h3>
+                        <xmp
+>
+if (!value) {
+  result.innerHTML = '값을 적어주세요.'
+} else if (value <= 10) {
+  result.innerHTML = '값이 10이상입니다.'
+} else if (value <= 100) {
+  result.innerHTML = '값이 10이상이고 100이하입니다.'
+} else {
+  result.innerHTML = '값이 100보다 큽니다.'
+}
+</xmp
+                        >
+                        <h3>if~else 결과값</h3>
+                        <p style="font-size: 15px">
+                            (숫자를 적어서 버튼을 클릭해주세요.)
+                        </p>
+                        <input id="ifElseValue" type="number" />
+                        <button
+                            onclick="ifElse(document.getElementById('ifElseValue').value)"
+                        >
+                            결과 확인
+                        </button>
+                        <p>if~else 결과 : <span id="ifElse"></span></p>
+                    </div>
+                    <div class="title"><h2>switch~case</h2></div>
+                    <div class="content">
+                        값에 따라 서로다른 코드를 실행할 때, switch 문이
+                        적합하다
+                        <h3>switch~case 연습</h3>
+                        <xmp
+>
+  switch (value) {
+    case '사과':
+        result.innerHTML = 200
+        break
+    case '포도':
+        result.innerHTML = 300
+        break
+    case '체리':
+        result.innerHTML = 400
+        break
+    default:
+        result.innerHTML = '사과, 포도, 체리 중 하나를 적어주세요'
+}
+                        </xmp>
+                        <h3>switch~case 결과값</h3>
+                        <p style="font-size: 15px">
+                            (사과, 포도, 체리 중 하나를 적은 후 버튼을
+                            클릭해주세요.)
+                        </p>
+                        <input id="switchValue" type="text" />
+                        <button
+                            onclick="swtichCase(document.getElementById('switchValue').value)"
+                        >
+                            결과 확인
+                        </button>
+                        <p>값 : <span id="switch"></span></p>
+                    </div>
+                </div>
+                <div id="looping">
+                    <div class="title"><h2>for</h2></div>
+                    <div class="content">
+                        <li>
+                            for 명령은 반복횟수가 알거나 주어진 경우 사용하는
+                            반복문이다.
+                        </li>
+                        <li>
+                            for(초기값 설정; 조건식; 반복 후 작업) { 작업문 }
+                        </li>
+                        <xmp
+>
+    if (value > 10) {
+      result.innerHTML = '10 이하의 수를 적으세요.'
+  } else {
+      for (let i = 0; i < Number(value); i++) {
+          result.innerHTML += i + '  '
+      }
+  }
+                        </xmp>
+                        <h3>for 결과값</h3>
+                        <p style="font-size: 15px">
+                            10 이하의 숫자를 적고 클릭을 눌러주세요.
+                        </p>
+                        <input id="forValue" type="number" />
+                        <button
+                            onclick="forCase(document.getElementById('forValue').value)"
+                        >
+                            결과 확인
+                        </button>
+                        <p>값 : <span id="forResult"></span></p>
+                    </div>
+                    <div class="title"><h2>while</h2></div>
+                    <div class="content">
+                        조건문이 false가 될 때까지 명령문을 반복하여 실행한다.
+                        <xmp
+>
+    if (value > 10) {
+      result.innerHTML = '10 이하의 수를 적으세요.'
+  } else {
+      while (i > 0) {
+          result.innerHTML += i + '  '
+          i--
+      }
+  }
+                        </xmp>
+                        <h3>while 결과값</h3>
+                        <p style="font-size: 15px">
+                            10 이하의 숫자를 적고 클릭을 눌러주세요.
+                        </p>
+                        <input id="whileValue" type="number" />
+                        <button
+                            onclick="whileCase(document.getElementById('whileValue').value)"
+                        >
+                            결과 확인
+                        </button>
+                        <p>값 : <span id="whileResult"></span></p>
+                    </div>
+                    <div class="title"><h2>do~while</h2></div>
+                    <div class="content">
+                        do 에 있는 명령문은 최소 한 번은 실행되며 while과 같이
+                        조건문이 false가 될 때까지 명령문을 반복하여 실행한다.
+                        <xmp></xmp>
+                        <h3>do~while 결과값</h3>
+                        <p style="font-size: 15px">
+                            10 이하의 숫자를 적고 클릭을 눌러주세요.
+                        </p>
+                        <input id="dowhileValue" type="number" />
+                        <button
+                            onclick="dowhileCase(document.getElementById('dowhileValue').value)"
+                        >
+                            결과 확인
+                        </button>
+                        <p>값 : <span id="dowhileResult"></span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
