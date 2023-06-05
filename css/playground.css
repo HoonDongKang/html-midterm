@@ -129,19 +129,15 @@ h2 {
   margin: 40px auto;
 }
 
-#javascript {
+#canvas {
   background-color: antiquewhite;
 }
-#dialog {
+#drawing {
   background-color: honeydew;
 }
-#condition {
+#grade {
   background-color: rgb(218, 198, 231);
 }
-#looping {
-  background-color: rgb(248, 198, 217);
-}
-
 .title {
   margin: 30px 0px 0px 30px;
 }

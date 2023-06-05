@@ -8,6 +8,9 @@ body {
   font-weight: 400;
   background-color: aliceblue;
 }
+h3 {
+  margin: 20px;
+}
 .floating-menu {
   padding: 5px;
   width: 150px;
@@ -59,7 +62,6 @@ nav > div {
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  text-align: center;
 }
 .logo,
 .menu,
@@ -69,15 +71,13 @@ nav > div {
 .AboutMe,
 .CSS,
 .HTML,
-.JavaScript,
-.Playground {
+.JavaScript {
   flex: 1;
 }
 .AboutMe #AboutMebtn,
 .HTML #HTMLbtn,
 .CSS #CSSbtn,
-.JavaScript #JavaScriptbtn,
-.Playground #Playgroundbtn {
+.JavaScript #JavaScriptbtn {
   font-size: 25px;
   border: none;
   outline: none;
@@ -93,8 +93,7 @@ nav > div {
 #AboutMebtn:hover,
 #HTMLbtn:hover,
 #CSSbtn:hover,
-#JavaScriptbtn:hover,
-#Playgroundbtn:hover {
+#JavaScriptbtn:hover {
   color: black;
 }
 

@@ -8,6 +8,9 @@ body {
   font-weight: 400;
   background-color: aliceblue;
 }
+h3 {
+  margin: 20px;
+}
 .floating-menu {
   padding: 5px;
   width: 150px;
