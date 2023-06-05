@@ -1,579 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>강동훈(2017H1102)</title>
-        <link rel="stylesheet" href="../css/css.css" />
-        <script src="../indexFunc.js" defer></script>
-    </head>
-    <body>
-        <div class="body">
-            <nav class="floating-menu">
-                <h3>바로가기</h3>
-                <li href="#" class="floating">CSS</li>
-                <li href="#" class="floating">SELECTOR</li>
-                <li href="#" class="floating">사용예</li>
-            </nav>
-            <nav class="header">
-                <div>
-                    <div class="logo">
-                        <a
-                            id="logoTag"
-                            onclick="logoHref()"
-                            style="cursor: pointer"
-                        >
-                            <img
-                                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
-                            />
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <div class="AboutMe">
-                            <a id="AboutMebtn" href="../html/home.html">
-                                Aboutme
-                            </a>
-                        </div>
-                        <div class="HTML">
-                            <a id="HTMLbtn" href="../html/html.html">HTML</a>
-                        </div>
-                        <div class="CSS">
-                            <a id="CSSbtn" href="../html/css.html">CSS</a>
-                        </div>
-                        <div class="JavaScript">
-                            <a id="JavaScriptbtn" href="../html/js.html"
-                                >JavaScript</a
-                            >
-                        </div>
-                    </div>
-                    <div class="account">
-                        <div><p id="userTag"></p></div>
-                    </div>
-                </div>
-            </nav>
-            <div class="bodyContainer">
-                <div id="css" class="container">
-                    <div>
-                        <div class="title"><h2>Style Sheet?</h2></div>
-                        <div class="content">
-                            <p>CSS (Cascading Style Sheet)</p>
-                            <ul>
-                                <li>
-                                    HTML 문서의 색이나 모양 등 외관을 꾸미는
-                                    언어
-                                </li>
-                                <br />
-                                <li>
-                                    CSS로 작성된 코드를 스타일 시트(Style
-                                    Sheet)라고 부른다.
-                                </li>
-                                <br />
-                                <li>
-                                    현재 CSS3 : CSS level 3<br />CSS1 -> CSS2 ->
-                                    CSS3 -> CSS4(현재 표준화 작업 중)
-                                </li>
-                                <br />
-                                <li>
-                                    CSS의 기능 :
-                                    <ul>
-                                        <li>색상과 배경</li>
-                                        <li>텍스트</li>
-                                        <li>폰트</li>
-                                        <li>박스 모델(Box Model)</li>
-                                        <li>비주얼 포맷 및 효과</li>
-                                        <li>리스트</li>
-                                        <li>테이블</li>
-                                        <li>사용자 인터페이스</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>Style Sheet 삽입 방법</h2></div>
-                        <div class="content">
-                            <p>
-                                HTML 문서에 CSS3 스타일 시트 만드는 방법 3 가지
-                            </p>
-                            <ol>
-                                <li>
-                                    &lt;style &gt;&lt;/style &gt; 태그에 스타일
-                                    시트 작성
-                                    <ul>
-                                        <li>
-                                            style태그는 head 태그 내에서만 사용
-                                        </li>
-                                        <li>style태그는 여러 번 작성 가능</li>
-                                        <li>
-                                            style태그에 작성된 스타일 시트는 웹
-                                            페이지 전체에 적용
-                                        </li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>style속성에 스타일 시트 작성</li>
-                                <br />
-                                <li>
-                                    스타일 시트를 별도 파일로 작성
-                                    <ul>
-                                        <li>
-                                            &lt;link &gt; 태그나 @import로 불러
-                                            사용
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-                <div id="selector" class="container">
-                    <div>
-                        <div class="title"><h2>SELECTOR</h2></div>
-                        <div class="content">
-                            <p>
-                                HTML 태그의 모양을 꾸밀 스타일 시트를 선택하는
-                                기능
-                            </p>
-                            <ul>
-                                <li>전체 선택자</li>
-                                <li>태그 선택자</li>
-                                <li>클래스 선택자</li>
-                                <li>아이디 선택자</li>
-                                <li>복합 선택자</li>
-                                <li>속성 선택자</li>
-                                <li>가상 클래스 선택자</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>Class Selector</h2></div>
-                        <div class="content">
-                            <p>점(.)으로 시작하는 이름의 셀렉터</p>
-                            <p>HTML 태그의 class 속성으로만 지정 가능</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>ID Selector</h2></div>
-                        <div class="content">
-                            <p>#으로 시작하는 이름의 셀렉터</p>
-                            <p>HTML 태그의 id 속성으로만 지정 가능</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>가상 Selector</h2></div>
-                        <div class="content">
-                            <p>
-                                어떤 조건이나 상황에서 스타일을 적용하도록 만든
-                                셀렉터
-                            </p>
-                            <p>40개 이상의 많은 가상 클래스 셀렉터 있음</p>
-                            <table border="1">
-                                <thead>
-                                    <tr>
-                                        <td>유형</td>
-                                        <td>셀렉터</td>
-                                        <td>설명</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">마우스</td>
-                                        <td>:hover</td>
-                                        <td>마우스가 올라갈 때 스타일 적용</td>
-                                    </tr>
-                                    <tr>
-                                        <td>::active</td>
-                                        <td>
-                                            마우스로 누르고 있는 상황에서 스타일
-                                            적용
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>폼 요소</td>
-                                        <td>:focus</td>
-                                        <td>
-                                            폼 요소가 키보드나 마우스 클릭으로
-                                            포커스를 받을 때 스타일 적용
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="2">링크</td>
-                                        <td>:link</td>
-                                        <td>
-                                            방문하지 않은 링크에 스타일 적용
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>:visited</td>
-                                        <td>방문한 링크에 스타일 적용</td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="2">블록</td>
-                                        <td>:first-letter</td>
-                                        <td>
-                                            &lt;p&gt;, &lt;div&gt; 등과 같은
-                                            블록형 태그의 첫 글자에 스타일
-                                            적용.<br />
-                                            &lt;span&gt;과 같은 인 라인 태그에는
-                                            적용되지 않음.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>:first-line</td>
-                                        <td>
-                                            &lt;p&gt;, &lt;div&gt; 등과 같은
-                                            블록형 태그의 첫 라인에 스타일 적용.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="2">구조</td>
-                                        <td>:nth-child(even)</td>
-                                        <td>
-                                            짝수 번째 모든 자식 태그에 스타일
-                                            적용
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>:nth-child(1)</td>
-                                        <td>첫 번째 자식 태그에 스타일 적용</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <br />
-                </div>
-                <div id="example" class="container">
-                    <div>
-                        <div class="title"><h2>색 활용</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    색 관련 CSS3 프로퍼티들
-                                    <ul>
-                                        <li>
-                                            color : 색 /* HTML 태그의 텍스트
-                                            글자색 */
-                                        </li>
-                                        <li>
-                                            background-color : 색 /* HTML 태그의
-                                            배경 색 */
-                                        </li>
-                                        <li>
-                                            border-color : 색 /* HTML 태그의
-                                            테두리 색 */
-                                        </li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>
-                                    사례
-                                    <ul>
-                                        <li class="colorExample">
-                                            글자색을 바꿉니다.
-                                        </li>
-                                        <li>
-                                            <span id="backColor"
-                                                >배경색을 바꿉니다.</span
-                                            >
-                                        </li>
-                                        <li>
-                                            <div id="borderColor">
-                                                테두리색을 바꿉니다.
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>텍스트 꾸미기</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    사례
-                                    <ul>
-                                        <li class="textDeco">오른쪽 정렬</li>
-                                        <li class="textDeco">중간 줄</li>
-                                        <li class="textDeco">윗줄</li>
-                                        <li class="textDeco">
-                                            3글자 들여쓰기 / 양쪽 정렬
-                                        </li>
-                                        <li class="textDeco">
-                                            1글자 들여쓰기 / 중앙 정렬
-                                        </li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>단위</li>
-                                <br />
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <td>단위</td>
-                                            <td>의미</td>
-                                            <td>사용예</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>em</td>
-                                            <td>배수</td>
-                                            <td>
-                                                font-size : 3em; /* 현재 폰트의
-                                                3배 크기 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>%</td>
-                                            <td>퍼센트</td>
-                                            <td>
-                                                font-size : 500%; /* 현재 폰트의
-                                                500% 크기 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>px</td>
-                                            <td>픽셀수</td>
-                                            <td>
-                                                font-size : 10px; /* 10픽셀 크기
-                                                */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>cm</td>
-                                            <td>센티미터</td>
-                                            <td>
-                                                margin-left : 5cm; /* 왼쪽 여백
-                                                5cm */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>mm</td>
-                                            <td>밀리미터</td>
-                                            <td>
-                                                margin-left : 10mcm; /* 왼쪽
-                                                여백 10mm */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>in</td>
-                                            <td>인치</td>
-                                            <td>
-                                                margin-left : 2in; /* 왼쪽 여백
-                                                2인치 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>pt</td>
-                                            <td>포인트</td>
-                                            <td>
-                                                margin-left : 20pt; /* 왼쪽 여백
-                                                20포인트 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>pc</td>
-                                            <td>포인트</td>
-                                            <td>
-                                                margin-left : 20pt; /* 왼쪽 여백
-                                                20포인트 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>pt</td>
-                                            <td>피카소(picas)</td>
-                                            <td>
-                                                font-size : 1pc; /* 1pc 크기의
-                                                폰트 */
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>deg</td>
-                                            <td>각도</td>
-                                            <td>
-                                                transform : rotate(20deg); /*
-                                                시계 방향으로 20도 회전 */
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <br />
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>박스 모델</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    HTML 태그는 사각형 박스로 다루어진다
-                                    <ul>
-                                        <li>
-                                            각 HTML 태그 요소를 하나의 박스로
-                                            다룸
-                                        </li>
-                                        <li>
-                                            박스 크기, 배경 색, 여백, 옆
-                                            박스와의 거리 등 제어 가능
-                                        </li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>
-                                    박스 모델의 구성
-                                    <ul>
-                                        <li>콘텐츠(contents)</li>
-                                        <li>패딩(padding)</li>
-                                        <li>테두리(border)</li>
-                                        <li>여백(margin)</li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>
-                                    사례
-                                    <div id="boxModel">DIV</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>배경</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    배경 다루기
-                                    <ul>
-                                        <li>
-                                            배경 색이나 이미지지정
-                                            <br />background-color,
-                                            background-image
-                                        </li>
-                                        <li>
-                                            배경 이미지의 위치,
-                                            <br />background-position
-                                        </li>
-                                        <li>
-                                            배경 이미지 반복 출력,<br />
-                                            background-repeat
-                                        </li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>
-                                    사례
-                                    <div id="divBackground">Div Background</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>그림자</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    text-shadow 프로퍼티
-                                    <ul>
-                                        <li>
-                                            text-shadow : h-shadow v-shadow
-                                            blur-radius color | none
-                                        </li>
-                                        <li>
-                                            h-shadow, v-shadow : 원본 텍스트와
-                                            그림자 텍스트 사이의 수평/수직
-                                            거리(필수)
-                                        </li>
-                                        <li>
-                                            blur-radius : 흐릿한 그림자를 만드는
-                                            효과로 흐릿하게 번지는 길이(선택)
-                                        </li>
-                                        <li>color : 그림자 색</li>
-                                        <li>none : 그림자 효과 없음</li>
-                                    </ul>
-                                </li>
-                                <br />
-                                <li>
-                                    사례
-                                    <ul>
-                                        <li class="textShadow">
-                                            첫 번째 사례입니다.
-                                        </li>
-                                        <li class="textShadow">
-                                            두 번째 사례입니다.
-                                        </li>
-                                        <li class="textShadow">
-                                            세 번째 사례입니다.
-                                        </li>
-                                        <li class="textShadow">
-                                            네 번째 사례입니다.
-                                        </li>
-                                        <li class="textShadow">
-                                            다섯 번째 사례입니다.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>마우스 커서</h2></div>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    HTML 태그 위에 마우스가 올라갈 때 마우스의
-                                    커서 모양 지정
-                                </li>
-                                <br />
-                                <li>
-                                    사례
-                                    <ul>
-                                        <li class="cursor">십자 모양 커서</li>
-                                        <li class="cursor">도움말 모양 커서</li>
-                                        <li class="cursor">포인터 모양 커서</li>
-                                        <li class="cursor">
-                                            프로그램 실행 중 모양 커서
-                                        </li>
-                                        <li class="cursor">
-                                            상하 크기 조절 모양 커서
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>박스의 배치</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>리스트 꾸미기</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>표 꾸미기</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>폼 꾸미기</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>애니메이션</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>변환</h2></div>
-                        <div class="content"></div>
-                    </div>
-                    <div>
-                        <div class="title"><h2>변환</h2></div>
-                        <div class="content"></div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강동훈(2017H1102)</title>
+    <link rel="stylesheet" href="../css/css.css" />
+    <script src="../indexFunc.js" defer></script>
+  </head>
+  <body>
+    <div class="body">
+      <nav class="floating-menu">
+        <h3>바로가기</h3>
+        <li href="#" class="floating">CSS</li>
+        <li href="#" class="floating">SELECTOR</li>
+        <li href="#" class="floating">사용예</li>
+      </nav>
+      <nav class="header">
+        <div>
+          <div class="logo">
+            <a id="logoTag" href="../html/home.html" style="cursor: pointer">
+              <img
+                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
+              />
+            </a>
+          </div>
+          <div class="menu">
+            <div class="AboutMe">
+              <a id="AboutMebtn" href="../html/home.html"> Aboutme </a>
             </div>
+            <div class="HTML">
+              <a id="HTMLbtn" href="../html/html.html">HTML</a>
+            </div>
+            <div class="CSS">
+              <a id="CSSbtn" href="../html/css.html">CSS</a>
+            </div>
+            <div class="JavaScript">
+              <a id="JavaScriptbtn" href="../html/js.html">JavaScript</a>
+            </div>
+            <div class="Playground">
+              <a id="Playgroundbtn" href="../html/js.html">Playground</a>
+            </div>
+          </div>
+          <div class="account">
+            <div><p id="userTag"></p></div>
+          </div>
         </div>
-    </body>
+      </nav>
+      <div class="bodyContainer">
+        <div id="css" class="container">
+          <div>
+            <div class="title"><h2>Style Sheet?</h2></div>
+            <div class="content">
+              <p>CSS (Cascading Style Sheet)</p>
+              <ul>
+                <li>HTML 문서의 색이나 모양 등 외관을 꾸미는 언어</li>
+                <br />
+                <li>
+                  CSS로 작성된 코드를 스타일 시트(Style Sheet)라고 부른다.
+                </li>
+                <br />
+                <li>
+                  현재 CSS3 : CSS level 3<br />CSS1 -> CSS2 -> CSS3 -> CSS4(현재
+                  표준화 작업 중)
+                </li>
+                <br />
+                <li>
+                  CSS의 기능 :
+                  <ul>
+                    <li>색상과 배경</li>
+                    <li>텍스트</li>
+                    <li>폰트</li>
+                    <li>박스 모델(Box Model)</li>
+                    <li>비주얼 포맷 및 효과</li>
+                    <li>리스트</li>
+                    <li>테이블</li>
+                    <li>사용자 인터페이스</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>Style Sheet 삽입 방법</h2></div>
+            <div class="content">
+              <p>HTML 문서에 CSS3 스타일 시트 만드는 방법 3 가지</p>
+              <ol>
+                <li>
+                  &lt;style &gt;&lt;/style &gt; 태그에 스타일 시트 작성
+                  <ul>
+                    <li>style태그는 head 태그 내에서만 사용</li>
+                    <li>style태그는 여러 번 작성 가능</li>
+                    <li>
+                      style태그에 작성된 스타일 시트는 웹 페이지 전체에 적용
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>style속성에 스타일 시트 작성</li>
+                <br />
+                <li>
+                  스타일 시트를 별도 파일로 작성
+                  <ul>
+                    <li>&lt;link &gt; 태그나 @import로 불러 사용</li>
+                  </ul>
+                </li>
+              </ol>
+              <br />
+            </div>
+          </div>
+        </div>
+        <div id="selector" class="container">
+          <div>
+            <div class="title"><h2>SELECTOR</h2></div>
+            <div class="content">
+              <p>HTML 태그의 모양을 꾸밀 스타일 시트를 선택하는 기능</p>
+              <ul>
+                <li>전체 선택자</li>
+                <li>태그 선택자</li>
+                <li>클래스 선택자</li>
+                <li>아이디 선택자</li>
+                <li>복합 선택자</li>
+                <li>속성 선택자</li>
+                <li>가상 클래스 선택자</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>Class Selector</h2></div>
+            <div class="content">
+              <p>점(.)으로 시작하는 이름의 셀렉터</p>
+              <p>HTML 태그의 class 속성으로만 지정 가능</p>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>ID Selector</h2></div>
+            <div class="content">
+              <p>#으로 시작하는 이름의 셀렉터</p>
+              <p>HTML 태그의 id 속성으로만 지정 가능</p>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>가상 Selector</h2></div>
+            <div class="content">
+              <p>어떤 조건이나 상황에서 스타일을 적용하도록 만든 셀렉터</p>
+              <p>40개 이상의 많은 가상 클래스 셀렉터 있음</p>
+              <table border="1">
+                <thead>
+                  <tr>
+                    <td>유형</td>
+                    <td>셀렉터</td>
+                    <td>설명</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">마우스</td>
+                    <td>:hover</td>
+                    <td>마우스가 올라갈 때 스타일 적용</td>
+                  </tr>
+                  <tr>
+                    <td>::active</td>
+                    <td>마우스로 누르고 있는 상황에서 스타일 적용</td>
+                  </tr>
+                  <tr>
+                    <td>폼 요소</td>
+                    <td>:focus</td>
+                    <td>
+                      폼 요소가 키보드나 마우스 클릭으로 포커스를 받을 때 스타일
+                      적용
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">링크</td>
+                    <td>:link</td>
+                    <td>방문하지 않은 링크에 스타일 적용</td>
+                  </tr>
+                  <tr>
+                    <td>:visited</td>
+                    <td>방문한 링크에 스타일 적용</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">블록</td>
+                    <td>:first-letter</td>
+                    <td>
+                      &lt;p&gt;, &lt;div&gt; 등과 같은 블록형 태그의 첫 글자에
+                      스타일 적용.<br />
+                      &lt;span&gt;과 같은 인 라인 태그에는 적용되지 않음.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>:first-line</td>
+                    <td>
+                      &lt;p&gt;, &lt;div&gt; 등과 같은 블록형 태그의 첫 라인에
+                      스타일 적용.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">구조</td>
+                    <td>:nth-child(even)</td>
+                    <td>짝수 번째 모든 자식 태그에 스타일 적용</td>
+                  </tr>
+                  <tr>
+                    <td>:nth-child(1)</td>
+                    <td>첫 번째 자식 태그에 스타일 적용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br />
+        </div>
+        <div id="example" class="container">
+          <div>
+            <div class="title"><h2>색 활용</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  색 관련 CSS3 프로퍼티들
+                  <ul>
+                    <li>color : 색 /* HTML 태그의 텍스트 글자색 */</li>
+                    <li>background-color : 색 /* HTML 태그의 배경 색 */</li>
+                    <li>border-color : 색 /* HTML 태그의 테두리 색 */</li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  사례
+                  <ul>
+                    <li class="colorExample">글자색을 바꿉니다.</li>
+                    <li>
+                      <span id="backColor">배경색을 바꿉니다.</span>
+                    </li>
+                    <li>
+                      <div id="borderColor">테두리색을 바꿉니다.</div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>텍스트 꾸미기</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  사례
+                  <ul>
+                    <li class="textDeco">오른쪽 정렬</li>
+                    <li class="textDeco">중간 줄</li>
+                    <li class="textDeco">윗줄</li>
+                    <li class="textDeco">3글자 들여쓰기 / 양쪽 정렬</li>
+                    <li class="textDeco">1글자 들여쓰기 / 중앙 정렬</li>
+                  </ul>
+                </li>
+                <br />
+                <li>단위</li>
+                <br />
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <td>단위</td>
+                      <td>의미</td>
+                      <td>사용예</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>em</td>
+                      <td>배수</td>
+                      <td>font-size : 3em; /* 현재 폰트의 3배 크기 */</td>
+                    </tr>
+                    <tr>
+                      <td>%</td>
+                      <td>퍼센트</td>
+                      <td>font-size : 500%; /* 현재 폰트의 500% 크기 */</td>
+                    </tr>
+                    <tr>
+                      <td>px</td>
+                      <td>픽셀수</td>
+                      <td>font-size : 10px; /* 10픽셀 크기 */</td>
+                    </tr>
+                    <tr>
+                      <td>cm</td>
+                      <td>센티미터</td>
+                      <td>margin-left : 5cm; /* 왼쪽 여백 5cm */</td>
+                    </tr>
+                    <tr>
+                      <td>mm</td>
+                      <td>밀리미터</td>
+                      <td>margin-left : 10mcm; /* 왼쪽 여백 10mm */</td>
+                    </tr>
+                    <tr>
+                      <td>in</td>
+                      <td>인치</td>
+                      <td>margin-left : 2in; /* 왼쪽 여백 2인치 */</td>
+                    </tr>
+                    <tr>
+                      <td>pt</td>
+                      <td>포인트</td>
+                      <td>margin-left : 20pt; /* 왼쪽 여백 20포인트 */</td>
+                    </tr>
+                    <tr>
+                      <td>pc</td>
+                      <td>포인트</td>
+                      <td>margin-left : 20pt; /* 왼쪽 여백 20포인트 */</td>
+                    </tr>
+                    <tr>
+                      <td>pt</td>
+                      <td>피카소(picas)</td>
+                      <td>font-size : 1pc; /* 1pc 크기의 폰트 */</td>
+                    </tr>
+                    <tr>
+                      <td>deg</td>
+                      <td>각도</td>
+                      <td>
+                        transform : rotate(20deg); /* 시계 방향으로 20도 회전 */
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>박스 모델</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  HTML 태그는 사각형 박스로 다루어진다
+                  <ul>
+                    <li>각 HTML 태그 요소를 하나의 박스로 다룸</li>
+                    <li>
+                      박스 크기, 배경 색, 여백, 옆 박스와의 거리 등 제어 가능
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  박스 모델의 구성
+                  <ul>
+                    <li>콘텐츠(contents)</li>
+                    <li>패딩(padding)</li>
+                    <li>테두리(border)</li>
+                    <li>여백(margin)</li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  사례
+                  <div id="boxModel">DIV</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>배경</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  배경 다루기
+                  <ul>
+                    <li>
+                      배경 색이나 이미지지정
+                      <br />background-color, background-image
+                    </li>
+                    <li>
+                      배경 이미지의 위치,
+                      <br />background-position
+                    </li>
+                    <li>
+                      배경 이미지 반복 출력,<br />
+                      background-repeat
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  사례
+                  <div id="divBackground">Div Background</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>그림자</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  text-shadow 프로퍼티
+                  <ul>
+                    <li>
+                      text-shadow : h-shadow v-shadow blur-radius color | none
+                    </li>
+                    <li>
+                      h-shadow, v-shadow : 원본 텍스트와 그림자 텍스트 사이의
+                      수평/수직 거리(필수)
+                    </li>
+                    <li>
+                      blur-radius : 흐릿한 그림자를 만드는 효과로 흐릿하게
+                      번지는 길이(선택)
+                    </li>
+                    <li>color : 그림자 색</li>
+                    <li>none : 그림자 효과 없음</li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  사례
+                  <ul>
+                    <li class="textShadow">첫 번째 사례입니다.</li>
+                    <li class="textShadow">두 번째 사례입니다.</li>
+                    <li class="textShadow">세 번째 사례입니다.</li>
+                    <li class="textShadow">네 번째 사례입니다.</li>
+                    <li class="textShadow">다섯 번째 사례입니다.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>마우스 커서</h2></div>
+            <div class="content">
+              <ul>
+                <li>
+                  HTML 태그 위에 마우스가 올라갈 때 마우스의 커서 모양 지정
+                </li>
+                <br />
+                <li>
+                  사례
+                  <ul>
+                    <li class="cursor">십자 모양 커서</li>
+                    <li class="cursor">도움말 모양 커서</li>
+                    <li class="cursor">포인터 모양 커서</li>
+                    <li class="cursor">프로그램 실행 중 모양 커서</li>
+                    <li class="cursor">상하 크기 조절 모양 커서</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="title"><h2>박스의 배치</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>리스트 꾸미기</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>표 꾸미기</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>폼 꾸미기</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>애니메이션</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>변환</h2></div>
+            <div class="content"></div>
+          </div>
+          <div>
+            <div class="title"><h2>변환</h2></div>
+            <div class="content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

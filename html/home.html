@@ -1,288 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>강동훈(2017H1102)</title>
-        <link rel="stylesheet" href="../css/home.css" />
-        <script src="../indexFunc.js" defer></script>
-    </head>
-    <body>
-        <div class="body">
-            <nav class="floating-menu">
-                <h3>바로가기</h3>
-                <li href="#" class="floating">자기소개</li>
-                <li href="#" class="floating">시간표</li>
-                <li href="#" class="floating">롤모델</li>
-            </nav>
-            <nav class="header">
-                <div>
-                    <div class="logo">
-                        <a
-                            id="logoTag"
-                            onclick="logoHref()"
-                            style="cursor: pointer"
-                        >
-                            <img
-                                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
-                            />
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <div class="AboutMe">
-                            <a id="AboutMebtn" href="../html/home.html">
-                                Aboutme
-                            </a>
-                        </div>
-                        <div class="HTML">
-                            <a id="HTMLbtn" href="../html/html.html">HTML</a>
-                        </div>
-                        <div class="CSS">
-                            <a id="CSSbtn" href="../html/css.html">CSS</a>
-                        </div>
-                        <div class="JavaScript">
-                            <a id="JavaScriptbtn" href="../html/js.html"
-                                >JavaScript</a
-                            >
-                        </div>
-                    </div>
-                    <div class="account">
-                        <div><p id="userTag"></p></div>
-                    </div>
-                </div>
-            </nav>
-            <div class="bodyContainer">
-                <div id="me" class="container">
-                    <div class="imgContainer">
-                        <img
-                            id="profileImg"
-                            src="https://user-images.githubusercontent.com/102861831/230270533-edf78262-87d2-4811-927e-f2f25ea0f966.png"
-                        />
-                    </div>
-                    <div class="infoContainer">
-                        <div id="name">
-                            <h3>이름</h3>
-                            <p>강동훈</p>
-                        </div>
-                        <div id="hobby">
-                            <h3>취미</h3>
-                            <ul>
-                                <li>
-                                    운동은 축구, 농구, 배드민턴을 가장
-                                    즐겨해요.<br />
-                                </li>
-                                <br />
-                                <li>
-                                    조용한 카페에서 독서하는 것을 좋아하며,
-                                    <br />주로 철학, 자기계발, 인문학에 관한
-                                    책을 읽어요. <br />가장 좋아하는 책은
-                                    <i>마이클 샌델의 <정의란 무엇인가></i> 에요.
-                                </li>
-                                <br />
-                                <li>
-                                    헤드폰으로 좋아하는 노래를 감상하며 코딩하는
-                                    것을 좋아해요
-                                    <br />
-                                    주로 재즈나 R&B 장르의 노래를 즐겨 들어요.
-                                </li>
-                                <br />
-                                <li>
-                                    요즘은 영작문 실력을 살리고자,
-                                    <br />즐겨읽던 책의 영어 원서를 읽거나
-                                    <br />
-                                    다양한 포스팅 및 문서를 원문으로 읽으려
-                                    <br />
-                                    노력하고 있어요.
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="job">
-                            <h3>직업</h3>
-                            <p>Node.js 백앤드 개발자</p>
-                            <h3>스택</h3>
-                            <ul>
-                                <li>JavaScript <br />TypeScript</li>
-                                <br />
-                                <li>Node.js<br />Express.js<br />Nest.js</li>
-                                <br />
-                                <li>MySQL, Postgresql</li>
-                                <br />
-                                <li>TypeORM, Prisma</li>
-                                <br />
-                            </ul>
-                            <p>+) 즐거울 정도의 React</p>
-                        </div>
-                        <div id="intro">
-                            <h3>자기소개</h3>
-                            <p>
-                                코드 한 줄이 나를 증명하는 개발자, 강동훈입니다.
-                            </p>
-                            <div id="linkDiv">
-                                <a href="https://github.com/HoonDongKang"
-                                    >Github</a
-                                >
-                                <a href="https://velog.io/@d159123">Velog</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div id="timeTable" class="container">
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>시간</th>
-                                <th>월</th>
-                                <th>화</th>
-                                <th>수</th>
-                                <th>목</th>
-                                <th>금</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="time">09:00~10:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">10:00~11:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">11:00~12:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">12:00~13:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td rowspan="2" class="firstClass">
-                                    영작문지도
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="time">13:00~14:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">14:00~15:00</td>
-                                <td class="secondClass">
-                                    영상자료활용과<br />자기계발
-                                </td>
-                                <td class="firstClass">영작문지도</td>
-                                <td></td>
-                                <td class="thirdClass">음악의세계</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">15:00~16:00</td>
-                                <td></td>
-                                <td></td>
-                                <td rowspan="3" class="fourthClass">
-                                    자바스크립트
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">16:00~17:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="time">17:00~18:00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <br />
-                <br />
-                <div id="roleModel" class="container">
-                    <div class="modelContainer">
-                        <img
-                            src="https://user-images.githubusercontent.com/102861831/232205725-706f8c10-5fb1-46cc-8d65-d82e3d02a075.png"
-                        />
-                    </div>
-                    <div class="reasonContainer">
-                        <div id="model">
-                            <h3>롤모델 :</h3>
-                            <p>유재석</p>
-                        </div>
-                        <div id="reason1">
-                            <h3>성실함</h3>
-                            <p>
-                                무명 개그맨 시절 '초심을 지키겠다'라고 말한
-                                유재석은 방송 경력동안 논란없이 절제된 생활을
-                                이어왔다.
-                            </p>
-                        </div>
-                        <div id="reason2">
-                            <h3>겸손함</h3>
-                            <p>
-                                연예인으로서 최고의 자리에 서있음에도 주변
-                                동료들 위로하고 존중하며 겸손한 면모를 보여준다.
-                            </p>
-                        </div>
-                        <div id="reason3">
-                            <h3>꾸준함</h3>
-                            <p>
-                                매일 새벽 6시에 기상하여 신문을 읽고 외국어
-                                공부를 하며, 건강을 위한 운동을 꾸준히 한다.
-                            </p>
-                        </div>
-                        <div id="reason4">
-                            <h3>명예</h3>
-                            <p>
-                                연예인들의 연예인으로, 12년 동안 연속 대상 수상
-                                기록을 가지며, 총 19회의 대상을 수상하였다.
-                            </p>
-                        </div>
-                        <div id="reason5">
-                            <h3>긍정적</h3>
-                            <p>
-                                매일 바쁜 삶 속에서도 항상 웃음을 잃지 않으며
-                                주변 사람들에게 선한 영향력을 전파한다.
-                            </p>
-                        </div>
-                        <div id="reason6">
-                            <h3>재치</h3>
-                            <p>
-                                장난스러운 행동과 말투에서도 상대방을 먼저
-                                배려하고 존중하여 훌륭한 리더십을 보여준다.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강동훈(2017H1102)</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <script src="../indexFunc.js" defer></script>
+  </head>
+  <body>
+    <div class="body">
+      <nav class="floating-menu">
+        <h3>바로가기</h3>
+        <li href="#" class="floating">자기소개</li>
+        <li href="#" class="floating">시간표</li>
+        <li href="#" class="floating">롤모델</li>
+      </nav>
+      <nav class="header">
+        <div>
+          <div class="logo">
+            <a id="logoTag" href="../html/home.html" style="cursor: pointer">
+              <img
+                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
+              />
+            </a>
+          </div>
+          <div class="menu">
+            <div class="AboutMe">
+              <a id="AboutMebtn" href="../html/home.html"> Aboutme </a>
             </div>
+            <div class="HTML">
+              <a id="HTMLbtn" href="../html/html.html">HTML</a>
+            </div>
+            <div class="CSS">
+              <a id="CSSbtn" href="../html/css.html">CSS</a>
+            </div>
+            <div class="JavaScript">
+              <a id="JavaScriptbtn" href="../html/js.html">JavaScript</a>
+            </div>
+            <div class="Playground">
+              <a id="Playgroundbtn" href="../html/js.html">Playground</a>
+            </div>
+          </div>
+          <div class="account">
+            <div><p id="userTag"></p></div>
+          </div>
         </div>
-    </body>
+      </nav>
+      <div class="bodyContainer">
+        <div id="me" class="container">
+          <div class="imgContainer">
+            <img
+              id="profileImg"
+              src="https://user-images.githubusercontent.com/102861831/230270533-edf78262-87d2-4811-927e-f2f25ea0f966.png"
+            />
+          </div>
+          <div class="infoContainer">
+            <div id="name">
+              <h3>이름</h3>
+              <p>강동훈</p>
+            </div>
+            <div id="hobby">
+              <h3>취미</h3>
+              <ul>
+                <li>운동은 축구, 농구, 배드민턴을 가장 즐겨해요.<br /></li>
+                <br />
+                <li>
+                  조용한 카페에서 독서하는 것을 좋아하며,
+                  <br />주로 철학, 자기계발, 인문학에 관한 책을 읽어요.
+                  <br />가장 좋아하는 책은
+                  <i>마이클 샌델의 <정의란 무엇인가></i> 에요.
+                </li>
+                <br />
+                <li>
+                  헤드폰으로 좋아하는 노래를 감상하며 코딩하는 것을 좋아해요
+                  <br />
+                  주로 재즈나 R&B 장르의 노래를 즐겨 들어요.
+                </li>
+                <br />
+                <li>
+                  요즘은 영작문 실력을 살리고자,
+                  <br />즐겨읽던 책의 영어 원서를 읽거나
+                  <br />
+                  다양한 포스팅 및 문서를 원문으로 읽으려
+                  <br />
+                  노력하고 있어요.
+                </li>
+              </ul>
+            </div>
+            <div id="job">
+              <h3>직업</h3>
+              <p>Node.js 백앤드 개발자</p>
+              <h3>스택</h3>
+              <ul>
+                <li>JavaScript <br />TypeScript</li>
+                <br />
+                <li>Node.js<br />Express.js<br />Nest.js</li>
+                <br />
+                <li>MySQL, Postgresql</li>
+                <br />
+                <li>TypeORM, Prisma</li>
+                <br />
+              </ul>
+              <p>+) 즐거울 정도의 React</p>
+            </div>
+            <div id="intro">
+              <h3>자기소개</h3>
+              <p>코드 한 줄이 나를 증명하는 개발자, 강동훈입니다.</p>
+              <div id="linkDiv">
+                <a href="https://github.com/HoonDongKang">Github</a>
+                <a href="https://velog.io/@d159123">Velog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div id="timeTable" class="container">
+          <table border="1">
+            <thead>
+              <tr>
+                <th>시간</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time">09:00~10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">10:00~11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">11:00~12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">12:00~13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="2" class="firstClass">영작문지도</td>
+              </tr>
+              <tr>
+                <td class="time">13:00~14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">14:00~15:00</td>
+                <td class="secondClass">영상자료활용과<br />자기계발</td>
+                <td class="firstClass">영작문지도</td>
+                <td></td>
+                <td class="thirdClass">음악의세계</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">15:00~16:00</td>
+                <td></td>
+                <td></td>
+                <td rowspan="3" class="fourthClass">자바스크립트</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">16:00~17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time">17:00~18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <br />
+        <div id="roleModel" class="container">
+          <div class="modelContainer">
+            <img
+              src="https://user-images.githubusercontent.com/102861831/232205725-706f8c10-5fb1-46cc-8d65-d82e3d02a075.png"
+            />
+          </div>
+          <div class="reasonContainer">
+            <div id="model">
+              <h3>롤모델 :</h3>
+              <p>유재석</p>
+            </div>
+            <div id="reason1">
+              <h3>성실함</h3>
+              <p>
+                무명 개그맨 시절 '초심을 지키겠다'라고 말한 유재석은 방송
+                경력동안 논란없이 절제된 생활을 이어왔다.
+              </p>
+            </div>
+            <div id="reason2">
+              <h3>겸손함</h3>
+              <p>
+                연예인으로서 최고의 자리에 서있음에도 주변 동료들 위로하고
+                존중하며 겸손한 면모를 보여준다.
+              </p>
+            </div>
+            <div id="reason3">
+              <h3>꾸준함</h3>
+              <p>
+                매일 새벽 6시에 기상하여 신문을 읽고 외국어 공부를 하며, 건강을
+                위한 운동을 꾸준히 한다.
+              </p>
+            </div>
+            <div id="reason4">
+              <h3>명예</h3>
+              <p>
+                연예인들의 연예인으로, 12년 동안 연속 대상 수상 기록을 가지며,
+                총 19회의 대상을 수상하였다.
+              </p>
+            </div>
+            <div id="reason5">
+              <h3>긍정적</h3>
+              <p>
+                매일 바쁜 삶 속에서도 항상 웃음을 잃지 않으며 주변 사람들에게
+                선한 영향력을 전파한다.
+              </p>
+            </div>
+            <div id="reason6">
+              <h3>재치</h3>
+              <p>
+                장난스러운 행동과 말투에서도 상대방을 먼저 배려하고 존중하여
+                훌륭한 리더십을 보여준다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
 </html>
