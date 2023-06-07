@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강동훈(2017H1102)</title>
-    <link rel="stylesheet" href="../css/playground.css" />
-    <script src="../playground.js" defer></script>
-  </head>
-  <body>
-    <div class="body">
-      <nav class="floating-menu">
-        <h3>바로가기</h3>
-        <li href="#" class="floating">Canvas</li>
-        <li href="#" class="floating">Drawing</li>
-        <li href="#" class="floating">Grade</li>
-      </nav>
-      <nav class="header">
-        <div>
-          <div class="logo">
-            <a id="logoTag" href="../html/home.html" style="cursor: pointer">
-              <img
-                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
-              />
-            </a>
-          </div>
-          <div class="menu">
-            <div class="AboutMe">
-              <a id="AboutMebtn" href="../html/home.html"> Aboutme </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>강동훈(2017H1102)</title>
+        <link rel="stylesheet" href="../css/playground.css" />
+        <script src="../playground.js" defer></script>
+    </head>
+    <body>
+        <div class="body">
+            <nav class="floating-menu">
+                <h3>바로가기</h3>
+                <li href="#" class="floating">Canvas</li>
+                <li href="#" class="floating">Drawing</li>
+                <li href="#" class="floating">Grade</li>
+            </nav>
+            <nav class="header">
+                <div>
+                    <div class="logo">
+                        <a
+                            id="logoTag"
+                            href="../html/home.html"
+                            style="cursor: pointer"
+                        >
+                            <img
+                                src="https://user-images.githubusercontent.com/102861831/230829291-7ba96769-f447-4933-8ee3-bf35f373fdc4.png"
+                            />
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <div class="AboutMe">
+                            <a id="AboutMebtn" href="../html/home.html">
+                                Aboutme
+                            </a>
+                        </div>
+                        <div class="HTML">
+                            <a id="HTMLbtn" href="../html/html.html">HTML</a>
+                        </div>
+                        <div class="CSS">
+                            <a id="CSSbtn" href="../html/css.html">CSS</a>
+                        </div>
+                        <div class="JavaScript">
+                            <a id="JavaScriptbtn" href="../html/js.html"
+                                >JavaScript</a
+                            >
+                        </div>
+                        <div class="Playground">
+                            <a id="Playgroundbtn" href="../html/playground.html"
+                                >Playground</a
+                            >
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div><p id="userTag"></p></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="bodyContainer">
+                <div id="canvas" class="container">
+                    <div class="title"><h2>텍스트 그리기</h2></div>
+                    <div class="content">
+                        <p>캔버스 위에 마우스를 올려보세요!</p>
+                        <canvas
+                            id="myCanvas"
+                            style="background-color: beige"
+                            width="800"
+                            height="500"
+                            onmouseover="canvasDraw()"
+                            onmouseout="canvasOut()"
+                        ></canvas>
+                    </div>
+                </div>
+                <div id="drawing" class="container">drawing</div>
+                <div id="grade" class="container">grade</div>
             </div>
-            <div class="HTML">
-              <a id="HTMLbtn" href="../html/html.html">HTML</a>
-            </div>
-            <div class="CSS">
-              <a id="CSSbtn" href="../html/css.html">CSS</a>
-            </div>
-            <div class="JavaScript">
-              <a id="JavaScriptbtn" href="../html/js.html">JavaScript</a>
-            </div>
-            <div class="Playground">
-              <a id="Playgroundbtn" href="../html/playground.html"
-                >Playground</a
-              >
-            </div>
-          </div>
-          <div class="account">
-            <div><p id="userTag"></p></div>
-          </div>
         </div>
-      </nav>
-      <div class="bodyContainer">
-        <div id="canvas" class="container">
-          <div class="title"><h2>텍스트 그리기</h2></div>
-          <div class="content">
-            <p>캔버스를 클릭해보세요 !</p>
-            <canvas
-              id="myCanvas"
-              style="background-color: beige"
-              width="600"
-              height="400"
-              onmouseover="canvasDrawing()"
-              onmouseout="canvasOut()"
-            ></canvas>
-          </div>
-        </div>
-        <div id="drawing" class="container">drawing</div>
-        <div id="grade" class="container">grade</div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
