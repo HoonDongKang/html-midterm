@@ -1,151 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poor Story', cursive;
-  font-size: 18px;
-  font-weight: 400;
-  background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poor Story', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: aliceblue;
 }
 h3 {
-  margin: 20px;
+    margin: 20px;
 }
 .floating-menu {
-  padding: 5px;
-  width: 150px;
-  position: fixed;
-  bottom: 30%;
-  right: 50px;
-  background-color: #f9f9f9;
-  /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    padding: 5px;
+    width: 150px;
+    position: fixed;
+    bottom: 30%;
+    right: 50px;
+    background-color: #f9f9f9;
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 .floating-menu li {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  cursor: pointer;
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor: pointer;
 }
 
 .floating-menu li:hover {
-  background-color: #dbdbdb;
+    background-color: #dbdbdb;
 }
 
 .body {
-  margin-top: 100px;
-  height: 100%;
+    margin-top: 100px;
+    height: 100%;
 }
 .header {
-  background-color: white;
-  padding: 4px 8px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+    background-color: white;
+    padding: 4px 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 nav > div {
-  display: flex;
+    display: flex;
 }
 
 .logo > a > img {
-  margin: auto;
-  display: block;
-  width: 230px;
+    margin: auto;
+    display: block;
+    width: 230px;
 }
 .menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
 }
 .logo,
 .menu,
 .account {
-  flex: 1;
+    flex: 1;
 }
 .AboutMe,
 .CSS,
 .HTML,
-.JavaScript {
-  flex: 1;
+.JavaScript,
+.Playground {
+    flex: 1;
 }
 .AboutMe #AboutMebtn,
 .HTML #HTMLbtn,
 .CSS #CSSbtn,
-.JavaScript #JavaScriptbtn {
-  font-size: 25px;
-  border: none;
-  outline: none;
-  color: rgb(68, 150, 107);
-  background-color: transparent;
-  padding: 14px 16px;
-  font-family: inherit;
-  cursor: pointer;
-  margin: auto;
-  display: inline;
-  text-decoration: none;
+.JavaScript #JavaScriptbtn,
+.Playground #Playgroundbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: rgb(68, 150, 107);
+    background-color: transparent;
+    padding: 14px 16px;
+    font-family: inherit;
+    cursor: pointer;
+    margin: auto;
+    display: inline;
+    text-decoration: none;
 }
 #AboutMebtn:hover,
 #HTMLbtn:hover,
 #CSSbtn:hover,
-#JavaScriptbtn:hover {
-  color: black;
+#JavaScriptbtn:hover,
+#Playgroundbtn:hover {
+    color: black;
 }
 
 .account {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .account div {
-  text-align: center;
+    text-align: center;
 }
 
 .bodyContainer {
-  height: 100%;
-  width: 100%;
-  padding: 0 15px;
-  margin: auto;
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
 }
 
 .bodyContainer > div {
-  margin: 40px auto;
+    margin: 40px auto;
 }
 
 #html {
-  background-color: antiquewhite;
+    background-color: antiquewhite;
 }
 #basicTag {
-  background-color: honeydew;
+    background-color: honeydew;
 }
 #listTag {
-  background-color: rgb(218, 198, 231);
+    background-color: rgb(218, 198, 231);
 }
 #tableTag {
-  background-color: rgb(236, 153, 189);
+    background-color: rgb(236, 153, 189);
 }
 #formTag {
-  background-color: rgb(184, 245, 243);
+    background-color: rgb(184, 245, 243);
 }
 #mediaTag {
-  background-color: rgb(234, 245, 173);
+    background-color: rgb(234, 245, 173);
 }
 .title {
-  margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px 30px;
 }
 .content {
-  margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 30px;
 }
 h2 {
-  padding: 10px;
-  border: 2px solid rgb(78, 199, 207);
-  border-radius: 10px;
-  display: inline-block;
+    padding: 10px;
+    border: 2px solid rgb(78, 199, 207);
+    border-radius: 10px;
+    display: inline-block;
 }
