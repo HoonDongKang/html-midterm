@@ -144,3 +144,36 @@ h2 {
 .content {
   margin: 0px 0px 0px 30px;
 }
+.colors {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+.drawingColor {
+  flex: 1;
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+  cursor: pointer;
+}
+
+#saveBtn {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  width: 60px;
+  margin-left: 10px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+}
+#saveBtn:active {
+  transform: scale(0.9);
+}
