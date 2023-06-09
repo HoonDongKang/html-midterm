@@ -100,7 +100,54 @@
             </div>
           </div>
         </div>
-        <div id="grade" class="container">grade</div>
+        <div id="grade" class="container">
+          <div class="title"><h2>성적처리기</h2></div>
+          <div class="content">
+            <div id="gradeDiv">
+              <div class="formContent" id="gradeForm">
+                <div id="saveMenu">
+                  <form id="contentForm">
+                    <div>
+                      <label>학번:</label
+                      ><input id="studentNum" type="text" required />
+                    </div>
+                    <div>
+                      <label>이름:</label>
+                      <input id="studentName" type="text" />
+                    </div>
+                    <div>
+                      <label>전공 성적:</label>
+                      <input id="major" type="number" />
+                    </div>
+                    <div>
+                      <label>교양 성적:</label>
+                      <input id="subject" type="number" />
+                    </div>
+                    <button type="button" onclick="saveGrade()">
+                      등록하기
+                    </button>
+                  </form>
+                </div>
+
+                <div id="listMenu">list</div>
+                <div id="controlMenu">control</div>
+                <div id="initializeMenu">init</div>
+                <div id="firstGraphMenu">g1</div>
+                <div id="secondGraphMenu">g2</div>
+              </div>
+              <div class="formContent" id="gradeMenu">
+                <button>
+                  <div id="save" onclick="menuClick()">성적입력</div>
+                </button>
+                <button id="list"><div>전체보기</div></button>
+                <button><div id="control">수정 및 삭제</div></button>
+                <button><div id="init">초기화</div></button>
+                <button><div id="g1">그래프 1</div></button>
+                <button><div id="g2">그래프 2</div></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
