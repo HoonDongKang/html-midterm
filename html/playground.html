@@ -105,7 +105,7 @@
           <div class="content">
             <div id="gradeDiv">
               <div class="formContent" id="gradeForm">
-                <div id="saveMenu">
+                <div id="saveMenu" class="toggle">
                   <form id="contentForm">
                     <div>
                       <label>학번:</label
@@ -123,27 +123,68 @@
                       <label>교양 성적:</label>
                       <input id="subject" type="number" />
                     </div>
-                    <button type="button" onclick="saveGrade()">
+                    <button type="button" id="gradeSave" onclick="saveGrade()">
                       등록하기
                     </button>
                   </form>
                 </div>
-
-                <div id="listMenu">list</div>
-                <div id="controlMenu">control</div>
-                <div id="initializeMenu">init</div>
-                <div id="firstGraphMenu">g1</div>
-                <div id="secondGraphMenu">g2</div>
+                <div id="listMenu" class="toggle">
+                  <div class="innerDiv">li</div>
+                </div>
+                <div id="controlMenu" class="toggle">
+                  <div class="innerDiv">co</div>
+                </div>
+                <div id="initializeMenu" class="toggle">
+                  <div class="innerDiv" id="initDiv">
+                    <div id="initEx">
+                      로컬 스토리지를 전부 비운 후, <br />
+                      초기값을 저장하였습니다.
+                    </div>
+                    <div id="initVal">
+                      초기값 :
+                      <div class="initVals">
+                        <table border="1">
+                          <tbody class="dummys">
+                            <tr>
+                              <td>학번 :</td>
+                              <td>2017H1102</td>
+                              <td>이름 :</td>
+                              <td>강동훈</td>
+                            </tr>
+                            <tr>
+                              <td>전공 점수 :</td>
+                              <td>100</td>
+                              <td>교양 점수 :</td>
+                              <td>100</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- <span class="dummys">학번: 2017H112</span>
+                        <span class="dummys">이름: 강동훈</span>
+                        <br />
+                        <span class="dummys">이름: 강동훈</span>
+                        <span class="dummys">교양학점 100</span> -->
+                      </div>
+                      <div class="initVals">2</div>
+                      <div class="initVals">3</div>
+                      <div class="initVals">4</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="firstGraphMenu" class="toggle">g1</div>
+                <div id="secondGraphMenu" class="toggle">g2</div>
               </div>
               <div class="formContent" id="gradeMenu">
-                <button>
-                  <div id="save" onclick="menuClick()">성적입력</div>
+                <button class="menuBtn" id="save">- 성적입력 -</button>
+                <button class="menuBtn" id="list" onclick="getList()">
+                  - 전체보기 -
                 </button>
-                <button id="list"><div>전체보기</div></button>
-                <button><div id="control">수정 및 삭제</div></button>
-                <button><div id="init">초기화</div></button>
-                <button><div id="g1">그래프 1</div></button>
-                <button><div id="g2">그래프 2</div></button>
+                <button class="menuBtn" id="control">- 수정 및 삭제 -</button>
+                <button class="menuBtn" id="init" onclick="init()">
+                  - 초기화 -
+                </button>
+                <button class="menuBtn" id="g1">- 그래프 1 -</button>
+                <button class="menuBtn" id="g2">- 그래프 2 -</button>
               </div>
             </div>
           </div>

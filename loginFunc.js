@@ -61,6 +61,6 @@ submitForm = (e) => {
 당신은 ${checkedGender}이며 국적은 ${country.value}네요.
 앞으로 당신에게 연락을 드릴 때 ${number.value} 또는 ${email.value}로 연락드릴게요.`)
 
-  localStorage.name = encodedName
+  document.cookie = `accName = ${encodedName}`
   location.href = '../html/home.html'
 }

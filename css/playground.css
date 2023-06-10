@@ -212,6 +212,29 @@ h2 {
 #contentForm > div {
   margin: 30px;
 }
+
+#gradeSave {
+  font-family: 'Poor Story', cursive;
+  float: right;
+  display: block;
+  padding: 5px 15px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #f9f7c0;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#gradeSave:hover {
+  background-color: #eeecb5;
+}
+
+#gradeSave:active {
+  transform: scale(0.9);
+}
 label {
   display: block;
 }
@@ -232,33 +255,69 @@ input:focus {
   box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
 }
 
-button {
+.menuBtn {
+  font-family: 'Poor Story', cursive;
   float: right;
   display: block;
-  padding: 10px 20px;
+  padding: 20px 20px;
   width: 200px;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
-  background-color: s#63ca68;
-  color: #fff;
   border: none;
-  border-radius: 5px;
+  background-color: transparent;
+  color: #060b13;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #5fd465;
+.menuBtn:hover {
+  color: rgb(121, 192, 192);
 }
 
-button:active {
-  background-color: #65b768;
-}
-
-#saveMenu,
+#initializeMenu,
 #listMenu,
 #controlMenu,
 #firstGraphMenu,
 #secondGraphMenu {
   display: none;
+}
+
+.innerDiv {
+  margin: 30px auto;
+  width: 80%;
+  height: 440px;
+  background-color: rgb(253, 244, 232);
+}
+
+#initDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#initEx {
+  height: 60px;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#initVal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.initVals {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.dummys {
+  text-align: center;
+}
+
+.dummys tr {
+  margin: 10px auto;
+  border: none;
 }
