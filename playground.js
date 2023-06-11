@@ -3,6 +3,8 @@ saveGrade = () => {
   const studentName = document.getElementById('studentName')
   const major = document.getElementById('major')
   const subject = document.getElementById('subject')
+  const totalGrade = Number(major.value) + Number(subject.value)
+  const average = ((Number(major.value) + Number(subject.value)) / 2).toFixed(2)
 
   if (!studentNumber.value) {
     alert('학번을 입력하세요!')
@@ -23,6 +25,8 @@ saveGrade = () => {
             name: studentName.value,
             major: major.value,
             subject: subject.value,
+            totalGrade: totalGrade,
+            average: average,
           })
 
           localStorage.setItem(studentNumber.value, stringJson)
@@ -82,31 +86,82 @@ menuBtns.forEach((btn) => {
   btn.addEventListener('click', menuClick)
 })
 
-getList = () => {
-  const list = document.getElementById('listMenu')
-  let listTable = `<table border=1>
-  <tr>
-  <th width=50>학번</th>
-  <th width=50 >이름</th>
-  <th width=50 align=center>전공</th>
-  <th width=50>교양</th>
-  <th width=50>합계</th>
-  <th width=50>평균</th>
-  <th width=50>석차</th>
-  </tr>`
+updateRank = () => {
+  const values = []
+
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i)
     const value = JSON.parse(localStorage.getItem(key))
+    Object.assign(value, { rank: 1 })
+    values.push(value)
+  }
+  for (let i = 0; i < values.length; i++) {
+    for (let j = 0; j < values.length; j++) {
+      if (values[i].totalGrade < values[j].totalGrade) {
+        values[i].rank++
+      }
+    }
+  }
+
+  return values
+}
+listTable = (arr) => {
+  const list = document.getElementById('resultList')
+  let listTable = `<table id="gradeTable" >
+  <tr>
+  <th>학번</th>
+  <th>이름</th>
+  <th width=40>전공</th>
+  <th width=40>교양</th>
+  <th width=40>합계</th>
+  <th width=40>평균</th>
+  <th width=40>석차</th>
+  </tr>`
+
+  for (let value of arr) {
     listTable += `<tr>
     <td>${value.number}</td>
     <td>${value.name}</td>
     <td>${value.major}</td>
     <td>${value.subject}</td>
+    <td>${value.totalGrade}</td>
+    <td>${value.average}</td>
+    <td>${value.rank}</td>
     </tr>
     `
-    list.innerHTML = listTable
-    // value.push(JSON.parse(localStorage.getItem(key)))
   }
+
+  list.innerHTML = listTable
+}
+getListByName = () => {
+  const updatedList = updateRank()
+  updatedList.sort((a, b) => {
+    if (a.name > b.name) return 1
+    if (a.name < b.name) return -1
+    return 0
+  })
+  listTable(updatedList)
+}
+getListByGrade = () => {
+  const updatedList = updateRank()
+  updatedList.sort((a, b) => {
+    return a.rank - b.rank
+  })
+  listTable(updatedList)
+}
+getListByMajor = () => {
+  const updatedList = updateRank()
+  updatedList.sort((a, b) => {
+    return b.major - a.major
+  })
+  listTable(updatedList)
+}
+getListBySubject = () => {
+  const updatedList = updateRank()
+  updatedList.sort((a, b) => {
+    return b.subject - a.subject
+  })
+  listTable(updatedList)
 }
 
 initial = () => {
@@ -116,24 +171,32 @@ initial = () => {
       name: '강동훈',
       major: 100,
       subject: 100,
+      totalGrade: 200,
+      average: (100).toFixed(2),
     },
     {
       number: '2017H1311',
       name: '멍청이',
       major: 0,
       subject: 0,
+      totalGrade: 0,
+      average: (0).toFixed(2),
     },
     {
       number: '2018H1223',
       name: '김아무개',
       major: 50,
       subject: 50,
+      totalGrade: 100,
+      average: (50).toFixed(2),
     },
     {
       number: '2023H1102',
       name: '신입생',
       major: 90,
       subject: 100,
+      totalGrade: 190,
+      average: (95).toFixed(2),
     },
   ]
 

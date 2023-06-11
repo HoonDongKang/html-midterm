@@ -131,7 +131,15 @@
                   </form>
                 </div>
                 <div id="listMenu" class="toggle">
-                  <div class="innerDiv" id="listMenu">li</div>
+                  <div class="innerDiv">
+                    <div id="resultBtn">
+                      <button onclick="getListByGrade()">성적순</button>
+                      <button onclick="getListByName()">이름순</button>
+                      <button onclick="getListBySubject()">교양순</button>
+                      <button onclick="getListByMajor()">전공순</button>
+                    </div>
+                    <div id="resultList"></div>
+                  </div>
                 </div>
                 <div id="controlMenu" class="toggle">
                   <div class="innerDiv">co</div>
@@ -224,7 +232,7 @@
               </div>
               <div class="formContent" id="gradeMenu">
                 <button class="menuBtn" id="save">- 성적입력 -</button>
-                <button class="menuBtn" id="list" onclick="getList()">
+                <button class="menuBtn" id="list" onclick="getListByGrade()">
                   - 전체보기 -
                 </button>
                 <button class="menuBtn" id="control">- 수정 및 삭제 -</button>
