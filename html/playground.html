@@ -75,7 +75,6 @@
               style="background-color: aliceblue"
               width="400"
               height="300"
-              onmouseover="init()"
             ></canvas>
             <div id="lineSize">
               굵기를 조절하세요
@@ -98,6 +97,9 @@
               <div class="drawingColor" style="background-color: purple"></div>
               <button id="saveBtn" onclick="handleSaveClick()">저장하기</button>
             </div>
+            <script>
+              init()
+            </script>
           </div>
         </div>
         <div id="grade" class="container">
@@ -129,7 +131,7 @@
                   </form>
                 </div>
                 <div id="listMenu" class="toggle">
-                  <div class="innerDiv">li</div>
+                  <div class="innerDiv" id="listMenu">li</div>
                 </div>
                 <div id="controlMenu" class="toggle">
                   <div class="innerDiv">co</div>
@@ -143,31 +145,77 @@
                     <div id="initVal">
                       초기값 :
                       <div class="initVals">
-                        <table border="1">
+                        <table border="1" class="dummyTable">
                           <tbody class="dummys">
                             <tr>
                               <td>학번 :</td>
-                              <td>2017H1102</td>
+                              <td class="dummAns">2017H1102</td>
                               <td>이름 :</td>
-                              <td>강동훈</td>
+                              <td class="dummAns">강동훈</td>
                             </tr>
                             <tr>
                               <td>전공 점수 :</td>
-                              <td>100</td>
+                              <td class="dummAns">100</td>
                               <td>교양 점수 :</td>
-                              <td>100</td>
+                              <td class="dummAns">100</td>
                             </tr>
                           </tbody>
                         </table>
-                        <!-- <span class="dummys">학번: 2017H112</span>
-                        <span class="dummys">이름: 강동훈</span>
-                        <br />
-                        <span class="dummys">이름: 강동훈</span>
-                        <span class="dummys">교양학점 100</span> -->
                       </div>
-                      <div class="initVals">2</div>
-                      <div class="initVals">3</div>
-                      <div class="initVals">4</div>
+                      <div class="initVals">
+                        <table border="1" class="dummyTable">
+                          <tbody class="dummys">
+                            <tr>
+                              <td>학번 :</td>
+                              <td class="dummAns">2017H1311</td>
+                              <td>이름 :</td>
+                              <td class="dummAns">멍청이</td>
+                            </tr>
+                            <tr>
+                              <td>전공 점수 :</td>
+                              <td class="dummAns">0</td>
+                              <td>교양 점수 :</td>
+                              <td class="dummAns">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="initVals">
+                        <table border="1" class="dummyTable">
+                          <tbody class="dummys">
+                            <tr>
+                              <td>학번 :</td>
+                              <td class="dummAns">2018H1223</td>
+                              <td>이름 :</td>
+                              <td class="dummAns">김아무개</td>
+                            </tr>
+                            <tr>
+                              <td>전공 점수 :</td>
+                              <td class="dummAns">50</td>
+                              <td>교양 점수 :</td>
+                              <td class="dummAns">50</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="initVals">
+                        <table border="1" class="dummyTable">
+                          <tbody class="dummys">
+                            <tr>
+                              <td>학번 :</td>
+                              <td class="dummAns">2023H1102</td>
+                              <td>이름 :</td>
+                              <td class="dummAns">신입생</td>
+                            </tr>
+                            <tr>
+                              <td>전공 점수 :</td>
+                              <td class="dummAns">90</td>
+                              <td>교양 점수 :</td>
+                              <td class="dummAns">100</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -180,7 +228,7 @@
                   - 전체보기 -
                 </button>
                 <button class="menuBtn" id="control">- 수정 및 삭제 -</button>
-                <button class="menuBtn" id="init" onclick="init()">
+                <button class="menuBtn" id="init" onclick="initial()">
                   - 초기화 -
                 </button>
                 <button class="menuBtn" id="g1">- 그래프 1 -</button>

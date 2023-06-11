@@ -183,9 +183,10 @@ function init() {
   //   context.lineWidth = 2 // 선 굵기 2
   const colors = document.getElementsByClassName('drawingColor')
   const range = document.getElementById('lineRange')
-  Array.from(colors).forEach((color) =>
+
+  Array.from(colors).forEach((color) => {
     color.addEventListener('click', handlerColor)
-  )
+  })
   if (range) {
     range.addEventListener('input', handleRange)
   }
@@ -194,53 +195,51 @@ function init() {
   canvas.addEventListener('mousedown', down)
   canvas.addEventListener('mouseup', up)
   canvas.addEventListener('mouseout', out)
-}
+  var startX = 0,
+    startY = 0 // 드래깅동안, 처음 마우스가 눌러진 좌표
+  var dragging = false
 
-var startX = 0,
-  startY = 0 // 드래깅동안, 처음 마우스가 눌러진 좌표
-var dragging = false
+  function handlerColor(e) {
+    const color = e.target.style.backgroundColor
+    context.strokeStyle = color
+  }
 
-function handlerColor(e) {
-  const color = e.target.style.backgroundColor
-  context.strokeStyle = color
-}
+  function handleRange(e) {
+    const size = e.target.value
+    context.lineWidth = size
+  }
 
-function handleRange(e) {
-  const size = e.target.value
-  context.lineWidth = size
-}
+  function draw(curX, curY) {
+    context.beginPath()
+    context.moveTo(startX, startY) // 처음 마우스를 클릭한 곳
+    context.lineTo(curX, curY) // 마우스가 이동한 곳
+    context.stroke()
+  }
+  function down(e) {
+    // 마우스를 클릭한 때
+    startX = e.offsetX
+    startY = e.offsetY
+    dragging = true
+  }
 
-function draw(curX, curY) {
-  context.beginPath()
-  context.moveTo(startX, startY) // 처음 마우스를 클릭한 곳
-  context.lineTo(curX, curY) // 마우스가 이동한 곳
-  context.stroke()
-}
-function down(e) {
-  // 마우스를 클릭한 때
-  startX = e.offsetX
-  startY = e.offsetY
-  dragging = true
-}
+  function up(e) {
+    dragging = false
+  }
 
-function up(e) {
-  dragging = false
-}
+  function move(e) {
+    // 마우스를 이동한 때
+    if (!dragging) return // 마우스가 눌러지지 않았으면 리턴
+    var curX = e.offsetX,
+      curY = e.offsetY
+    draw(curX, curY)
+    startX = curX
+    startY = curY
+  }
 
-function move(e) {
-  // 마우스를 이동한 때
-  if (!dragging) return // 마우스가 눌러지지 않았으면 리턴
-  var curX = e.offsetX,
-    curY = e.offsetY
-  draw(curX, curY)
-  startX = curX
-  startY = curY
+  function out(e) {
+    dragging = false
+  }
 }
-
-function out(e) {
-  dragging = false
-}
-
 function handleSaveClick() {
   const image = canvas.toDataURL('image/png')
   const link = document.createElement('a')

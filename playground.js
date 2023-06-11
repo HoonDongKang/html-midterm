@@ -83,15 +83,33 @@ menuBtns.forEach((btn) => {
 })
 
 getList = () => {
-  const value = []
+  const list = document.getElementById('listMenu')
+  let listTable = `<table border=1>
+  <tr>
+  <th width=50>학번</th>
+  <th width=50 >이름</th>
+  <th width=50 align=center>전공</th>
+  <th width=50>교양</th>
+  <th width=50>합계</th>
+  <th width=50>평균</th>
+  <th width=50>석차</th>
+  </tr>`
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i)
-    value.push(JSON.parse(localStorage.getItem(key)))
+    const value = JSON.parse(localStorage.getItem(key))
+    listTable += `<tr>
+    <td>${value.number}</td>
+    <td>${value.name}</td>
+    <td>${value.major}</td>
+    <td>${value.subject}</td>
+    </tr>
+    `
+    list.innerHTML = listTable
+    // value.push(JSON.parse(localStorage.getItem(key)))
   }
 }
 
-init = () => {
-  const initialForm = document.getElementById('initializeMenu')
+initial = () => {
   const dummy = [
     {
       number: '2017H1102',

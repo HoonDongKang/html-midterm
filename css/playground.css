@@ -317,7 +317,15 @@ input:focus {
   text-align: center;
 }
 
-.dummys tr {
+.dummyTable {
   margin: 10px auto;
   border: none;
+  border-style: none;
+}
+.dummys td {
+  border-spacing: 0px;
+  border-style: none;
+}
+.dummAns {
+  font-weight: bolder;
 }
