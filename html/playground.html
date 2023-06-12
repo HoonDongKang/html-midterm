@@ -142,7 +142,50 @@
                   </div>
                 </div>
                 <div id="controlMenu" class="toggle">
-                  <div class="innerDiv">co</div>
+                  <div class="innerDiv">
+                    <div id="checking">
+                      <span>수정할 학번을 적어주세요</span>
+                      <div id="checkNumber">
+                        <label>학번:</label
+                        ><input id="chceckStuNum" type="text" required />
+                      </div>
+                      <button id="checkBtn" onclick="checkStuNum()">
+                        확인
+                      </button>
+                    </div>
+                    <div id="modifying">
+                      <div>
+                        <button id="deleteGrade" onclick="deleteData()">
+                          삭제하기
+                        </button>
+                      </div>
+                      <form id="modifyForm">
+                        <div>
+                          <label>학번:</label
+                          ><input id="modifyNum" type="text" disabled />
+                        </div>
+                        <div>
+                          <label>이름:</label>
+                          <input id="modifyName" type="text" />
+                        </div>
+                        <div>
+                          <label>전공 성적:</label>
+                          <input id="modifyMajor" type="number" />
+                        </div>
+                        <div>
+                          <label>교양 성적:</label>
+                          <input id="modifySubject" type="number" />
+                        </div>
+                        <button
+                          type="button"
+                          id="modifyBtn"
+                          onclick="modifyData()"
+                        >
+                          수정하기
+                        </button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
                 <div id="initializeMenu" class="toggle">
                   <div class="innerDiv" id="initDiv">

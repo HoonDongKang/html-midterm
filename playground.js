@@ -1,3 +1,15 @@
+getLocalKeys = () => {
+  const keyValues = []
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    const value = JSON.parse(localStorage.getItem(key))
+    keyValues.push(value)
+  }
+
+  return keyValues
+}
+
 saveGrade = () => {
   const studentNumber = document.getElementById('studentNum')
   const studentName = document.getElementById('studentName')
@@ -6,41 +18,46 @@ saveGrade = () => {
   const totalGrade = Number(major.value) + Number(subject.value)
   const average = ((Number(major.value) + Number(subject.value)) / 2).toFixed(2)
 
-  if (!studentNumber.value) {
-    alert('학번을 입력하세요!')
-  } else {
-    if (!studentName.value) {
-      alert('이름을 입력하세요!')
+  const keyValues = getLocalKeys()
+  if (keyValues.find((key) => key.number == studentNumber.value))
+    alert('같은 학번이 이미 등록되어있습니다.')
+  else {
+    if (!studentNumber.value) {
+      alert('학번을 입력하세요!')
     } else {
-      if (!major.value || major.value < 0 || major.value > 100) {
-        alert(`전공 점수를 입력하세요! 
-전공 점수는 0이상 100이하여야 합니다.`)
+      if (!studentName.value) {
+        alert('이름을 입력하세요!')
       } else {
-        if (!subject.value || subject.value < 0 || subject.value > 100) {
-          alert(`교양 점수를 입력하세요! 
-교양 점수는 0이상 100이하여야 합니다.`)
+        if (!major.value || major.value < 0 || major.value > 100) {
+          alert(`전공 점수를 입력하세요!
+전공 점수는 0이상 100이하여야 합니다.`)
         } else {
-          const stringJson = JSON.stringify({
-            number: studentNumber.value,
-            name: studentName.value,
-            major: major.value,
-            subject: subject.value,
-            totalGrade: totalGrade,
-            average: average,
-          })
+          if (!subject.value || subject.value < 0 || subject.value > 100) {
+            alert(`교양 점수를 입력하세요!
+교양 점수는 0이상 100이하여야 합니다.`)
+          } else {
+            const stringJson = JSON.stringify({
+              number: studentNumber.value,
+              name: studentName.value,
+              major: major.value,
+              subject: subject.value,
+              totalGrade: totalGrade,
+              average: average,
+            })
 
-          localStorage.setItem(studentNumber.value, stringJson)
+            localStorage.setItem(studentNumber.value, stringJson)
 
-          alert(`학번 : ${studentNumber.value}
+            alert(`학번 : ${studentNumber.value}
 이름: ${studentName.value}
 전공 점수 : ${major.value}
 교양 점수: ${subject.value}
 저장 완료 되었습니다.`)
 
-          studentNumber.value = null
-          studentName.value = null
-          major.value = null
-          subject.value = null
+            studentNumber.value = null
+            studentName.value = null
+            major.value = null
+            subject.value = null
+          }
         }
       }
     }
@@ -203,5 +220,71 @@ initial = () => {
   localStorage.clear()
   for (let dummys of dummy) {
     localStorage.setItem(dummys.number, JSON.stringify(dummys))
+  }
+}
+
+checkStuNum = () => {
+  const stuNum = document.getElementById('chceckStuNum')
+  const checkForm = document.getElementById('checking')
+  const modifyForm = document.getElementById('modifying')
+  const studentNum = document.getElementById('modifyNum')
+  const studentName = document.getElementById('modifyName')
+  const major = document.getElementById('modifyMajor')
+  const subject = document.getElementById('modifySubject')
+
+  const keyValues = getLocalKeys()
+  const data = keyValues.find((key) => key.number == stuNum.value)
+  if (data) {
+    checkForm.style.display = 'none'
+    modifyForm.style.display = 'block'
+    studentNum.value = data.number
+    studentName.value = data.name
+    major.value = data.major
+    subject.value = data.subject
+  } else {
+    alert('등록된 학번이 없는뎁쇼')
+  }
+}
+
+modifyData = () => {
+  const checkForm = document.getElementById('checking')
+  const modifyForm = document.getElementById('modifying')
+  const studentNum = document.getElementById('modifyNum')
+  const studentName = document.getElementById('modifyName')
+  const major = document.getElementById('modifyMajor')
+  const subject = document.getElementById('modifySubject')
+  const totalGrade = Number(major.value) + Number(subject.value)
+  const average = ((Number(major.value) + Number(subject.value)) / 2).toFixed(2)
+  const stringJson = JSON.stringify({
+    number: studentNum.value,
+    name: studentName.value,
+    major: major.value,
+    subject: subject.value,
+    totalGrade: totalGrade,
+    average: average,
+  })
+
+  localStorage.setItem(studentNum.value, stringJson)
+
+  alert(`학번 : ${studentNum.value}
+이름: ${studentName.value}
+전공 점수 : ${major.value}
+교양 점수: ${subject.value}
+수정 완료 되었습니다.`)
+
+  checkForm.style.display = 'block'
+  modifyForm.style.display = 'none'
+}
+
+deleteData = () => {
+  const stuNum = document.getElementById('chceckStuNum')
+  const studentNum = document.getElementById('modifyNum')
+  const checkForm = document.getElementById('checking')
+  const modifyForm = document.getElementById('modifying')
+  if (confirm('삭제하시겠습니까?')) {
+    localStorage.removeItem(studentNum.value)
+    checkForm.style.display = 'block'
+    modifyForm.style.display = 'none'
+    stuNum.value = null
   }
 }
