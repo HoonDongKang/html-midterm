@@ -247,3 +247,15 @@ function handleSaveClick() {
   link.download = 'Canvas drawing'
   link.click()
 }
+
+getLocalKeys = () => {
+  const keyValues = []
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    const value = JSON.parse(localStorage.getItem(key))
+    keyValues.push(value)
+  }
+
+  return keyValues
+}

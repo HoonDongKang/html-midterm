@@ -194,10 +194,10 @@ initial = () => {
     {
       number: '2017H1311',
       name: '멍청이',
-      major: 0,
+      major: 10,
       subject: 0,
-      totalGrade: 0,
-      average: (0).toFixed(2),
+      totalGrade: 10,
+      average: (10).toFixed(2),
     },
     {
       number: '2018H1223',
@@ -283,8 +283,63 @@ deleteData = () => {
   const modifyForm = document.getElementById('modifying')
   if (confirm('삭제하시겠습니까?')) {
     localStorage.removeItem(studentNum.value)
+    alert(`${studentNum.value}의 데이터가 삭제되었습니다.`)
     checkForm.style.display = 'block'
     modifyForm.style.display = 'none'
     stuNum.value = null
   }
+}
+
+let myChart = null
+function firstGraph() {
+  const ctx = document.getElementById('firstGraph').getContext('2d')
+  const keyValues = getLocalKeys()
+  const name = []
+  const avg = []
+  keyValues.forEach((obj) => {
+    name.push(obj.name)
+    avg.push(obj.average)
+  })
+  let config = {
+    type: 'bar',
+    data: {
+      labels: name,
+      datasets: [
+        {
+          label: '평균 점수',
+          data: avg,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)',
+          ],
+          borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)',
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  }
+  if (myChart != null) {
+    myChart.destroy()
+  }
+  myChart = new Chart(ctx, config)
 }

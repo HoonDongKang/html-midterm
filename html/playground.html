@@ -9,6 +9,7 @@
     <script src="../playground.js" defer></script>
     <script src="../accountLocal.js" defer></script>
     <script src="../canvas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="body">
@@ -224,7 +225,7 @@
                             </tr>
                             <tr>
                               <td>전공 점수 :</td>
-                              <td class="dummAns">0</td>
+                              <td class="dummAns">10</td>
                               <td>교양 점수 :</td>
                               <td class="dummAns">0</td>
                             </tr>
@@ -270,7 +271,9 @@
                     </div>
                   </div>
                 </div>
-                <div id="firstGraphMenu" class="toggle">g1</div>
+                <div id="firstGraphMenu" class="toggle">
+                  <canvas id="firstGraph"></canvas>
+                </div>
                 <div id="secondGraphMenu" class="toggle">g2</div>
               </div>
               <div class="formContent" id="gradeMenu">
@@ -282,7 +285,9 @@
                 <button class="menuBtn" id="init" onclick="initial()">
                   - 초기화 -
                 </button>
-                <button class="menuBtn" id="g1">- 그래프 1 -</button>
+                <button class="menuBtn" id="g1" onclick="firstGraph()">
+                  - 그래프 1 -
+                </button>
                 <button class="menuBtn" id="g2">- 그래프 2 -</button>
               </div>
             </div>
