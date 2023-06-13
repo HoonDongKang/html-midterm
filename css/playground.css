@@ -137,6 +137,9 @@ h2 {
 #grade {
   background-color: rgb(218, 198, 231);
 }
+#calculator {
+  background-color: bisque;
+}
 .title {
   margin: 30px 0px 0px 30px;
 }
