@@ -216,10 +216,14 @@ initial = () => {
       average: (75).toFixed(2),
     },
   ]
-
-  localStorage.clear()
-  for (let dummys of dummy) {
-    localStorage.setItem(dummys.number, JSON.stringify(dummys))
+  if (
+    confirm(`초기화를 하시면 모든 데이터가 삭제되고 초기값이 저장됩니다.
+초기화를 진행하시겠습니까?`)
+  ) {
+    localStorage.clear()
+    for (let dummys of dummy) {
+      localStorage.setItem(dummys.number, JSON.stringify(dummys))
+    }
   }
 }
 
@@ -385,4 +389,144 @@ circleGraph = () => {
     myChart.destroy()
   }
   myChart = new Chart(ctx, configuration)
+}
+
+const result = document.querySelector('#result')
+
+function add() {
+  const number = Number(event.target.innerText)
+  result.value += number
+}
+
+const operate = () => {
+  const operator = event.target.id
+  switch (operator) {
+    case 'reset':
+      result.value = ''
+      break
+    case 'convert':
+      result.value = -result.value
+      break
+    case 'percent':
+      result.value /= 100
+      break
+    case 'addition':
+      result.value += '+'
+      break
+    case 'divide':
+      result.value += '/'
+      break
+    case 'multiply':
+      result.value += '*'
+      break
+    case 'subtraction':
+      result.value += '-'
+      break
+    case 'dot':
+      result.value += '.'
+      break
+    case 'equal':
+      try {
+        result.value = eval(result.value)
+        break
+      } catch (e) {
+        //예외 처리
+        result.value = 'ERR'
+      }
+  }
+}
+
+const bmiFunction = () => {
+  const height = Number(document.getElementById('labelHeight').value)
+  const weight = Number(document.getElementById('labelWeight').value)
+  let bmi = weight / (height / 100) ** 2 //bmi 계산법
+  bmi = Math.round(bmi * 100) / 100 //bmi 수치 반올림
+  let bmiClass = ''
+
+  if (bmi > 0 && bmi < 18.5) {
+    bmiClass = '저체중'
+  } else if (bmi >= 18.5 && bmi < 23) {
+    bmiClass = '정상'
+  } else if (bmi >= 23 && bmi < 25) {
+    bmiClass = '과체중'
+  } else if (bmi >= 25 && bmi < 30) {
+    bmiClass = '1단계비만'
+  } else if (bmi >= 30 && bmi < 35) {
+    bmiClass = '2단계비만'
+  } else if (bmi >= 35) {
+    bmiClass = '고도비만'
+  } else {
+    bmiclass = '정확한 수치를 입력해주세요.'
+  }
+  document.getElementById('LabelResult').value = bmi
+  document.getElementById('LabelClass').value = bmiClass
+}
+
+const koreanNoodle = ['비빔국수', '라면', '잔치국수', '콩국수', '냉면']
+const koreanMeal = ['제육볶음', '낙지 볶음', '불고기', '삼겹살', '한우']
+const koreanSoup = ['김치찌개', '된장찌개', '부대찌개', '갈비탕', '순두부찌개']
+const chineseNoodle = ['짜장면', '짬뽕', '볶음면', '고추잡채', '탄탄면']
+const chineseMeal = ['새우볶음밥', '마파두부', '탕수육', '라조기', '난자완스']
+const chineseSoup = ['계란탕', '유산슬', '누룽지탕', '마라탕', '짬뽕']
+const japaneseNoodle = ['모밀', '우동', '야끼소바', '라멘', '나베야키']
+const japaneseMeal = ['초밥', '알밥', '사시미', '텐동', '사케동']
+const japaneseSoup = ['미소된장국', '스키야키', '나베야키', '라멘', '샤브샤브']
+const westernNoodle = [
+  '까르보나라',
+  '투움바파스타',
+  '알리오 올리오',
+  '쉬림프 아라비아따',
+  '로제 파스타',
+]
+const westernMeal = ['돈까스', '햄버거', '바베큐', '스테이크', ' 샐러드']
+const westernSoup = [
+  '양송이 스프',
+  '옥수수 스프',
+  '토마토 스프',
+  '치킨누들스프',
+  '비프스튜',
+]
+
+function getFood() {
+  const spanFood = document.getElementById('food')
+
+  const countryArray = document.getElementsByName('country')
+  const foodTypeArray = document.getElementsByName('foodType')
+
+  let randomNumber = Math.ceil(Math.random() * 10) % 5
+  const country = []
+  const foodType = []
+
+  for (let i = 0; i < countryArray.length; i++) {
+    let num = country.push(countryArray[i].checked)
+  }
+  for (let i = 0; i < foodTypeArray.length; i++) {
+    let num = foodType.push(foodTypeArray[i].checked)
+  }
+
+  if (country[0] === true && foodType[0] === true) {
+    spanFood.innerText = koreanNoodle[randomNumber]
+  } else if (country[0] === true && foodType[1] === true) {
+    spanFood.innerText = koreanMeal[randomNumber]
+  } else if (country[0] === true && foodType[2] === true) {
+    spanFood.innerText = koreanSoup[randomNumber]
+  } else if (country[1] === true && foodType[0] === true) {
+    spanFood.innerText = japaneseNoodle[randomNumber]
+  } else if (country[1] === true && foodType[1] === true) {
+    spanFood.innerText = japaneseMeal[randomNumber]
+  } else if (country[1] === true && foodType[2] === true) {
+    spanFood.innerText = japaneseSoup[randomNumber]
+  } else if (country[2] === true && foodType[0] === true) {
+    spanFood.innerText = chineseNoodle[randomNumber]
+  } else if (country[2] === true && foodType[1] === true) {
+    spanFood.innerText = chineseMeal[randomNumber]
+  } else if (country[2] === true && foodType[2] === true) {
+    spanFood.innerText = chineseSoup[randomNumber]
+  } else if (country[3] === true && foodType[0] === true) {
+    spanFood.innerText = westernNoodle[randomNumber]
+  } else if (country[3] === true && foodType[1] === true) {
+    spanFood.innerText = westernMeal[randomNumber]
+  } else if (country[3] === true && foodType[2] === true) {
+    spanFood.innerText = westernSoup[randomNumber]
+  }
 }

@@ -18,6 +18,9 @@
         <li href="#" class="floating">Canvas</li>
         <li href="#" class="floating">Drawing</li>
         <li href="#" class="floating">Grade</li>
+        <li href="#" class="floating">Calculator</li>
+        <li href="#" class="floating">BMI</li>
+        <li href="#" class="floating">Random Food</li>
       </nav>
       <nav class="header">
         <div>
@@ -304,7 +307,202 @@
           <div class="title">
             <h2>계산기</h2>
           </div>
-          <div class="content"></div>
+          <div class="content">
+            <div id="firstContainer">
+              <div id="display">
+                <input id="result" type="text" disabled />
+              </div>
+              <div class="row first">
+                <button class="operator" id="reset" onclick="operate()">
+                  AC
+                </button>
+                <button class="operator" id="convert" onclick="operate()">
+                  +/-
+                </button>
+                <button class="operator" id="percent" onclick="operate()">
+                  %
+                </button>
+                <button class="operator" id="divide" onclick="operate()">
+                  ÷
+                </button>
+              </div>
+              <div class="row second">
+                <button class="number" onclick="add()">
+                  <span>7</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>8</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>9</span>
+                </button>
+                <button class="operator" id="multiply" onclick="operate()">
+                  ×
+                </button>
+              </div>
+              <div class="row third">
+                <button class="number" onclick="add()">
+                  <span>4</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>5</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>6</span>
+                </button>
+                <button class="operator" id="subtraction" onclick="operate()">
+                  -
+                </button>
+              </div>
+              <div class="row fourth">
+                <button class="number" onclick="add()">
+                  <span>1</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>2</span>
+                </button>
+                <button class="number" onclick="add()">
+                  <span>3</span>
+                </button>
+                <button class="operator" id="addition" onclick="operate()">
+                  +
+                </button>
+              </div>
+              <div class="row fifth">
+                <button class="number" onclick="add()">
+                  <span>0</span>
+                </button>
+                <button class="operator" id="dot" onclick="operate()">.</button>
+                <button class="operator" id="equal" onclick="operate()">
+                  =
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bmiCal" class="container">
+          <div class="title"><h2>BMI 계산기</h2></div>
+          <div class="content">
+            <fieldset id="bmiCalculator">
+              <div id="sex">
+                <h3>성별 정보</h3>
+                <p>성별</p>
+                <div>
+                  <label for="sexM">
+                    <input type="radio" name="sexRadio" id="sexM" checked />
+                    남자
+                  </label>
+                  <label for="sexF">
+                    <input type="radio" name="sexRadio" id="sexF" />
+                    여자
+                  </label>
+                </div>
+              </div>
+              <div id="bodyInformation">
+                <h3>신체정보</h3>
+                <div>
+                  <div class="information" id="height">
+                    <label for="labelHeight"
+                      >키(cm)
+                      <input type="number" id="labelHeight" />
+                    </label>
+                  </div>
+                  <div class="information" id="weight">
+                    <label for="labelWeight"
+                      >몸무게(kg)
+                      <input type="number" id="labelWeight" />
+                    </label>
+                  </div>
+                  <div class="information" id="age">
+                    <label for="labelAge"
+                      >나이(세)
+                      <input type="number" id="labelAge" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div id="bmiResult">
+                <h3>비만도 결과</h3>
+                <div>
+                  <label for="LabelResult"
+                    >체질량지수
+                    <input type="text" id="LabelResult" disabled />
+                    <input type="text" id="LabelClass" disabled />
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <button id="showResult" onclick="bmiFunction()">결과 보기</button>
+          </div>
+        </div>
+        <div id="ranFood" class="container">
+          <div class="title">
+            <h2>랜덤 음식 추천기</h2>
+          </div>
+
+          <div class="content">
+            <div>
+              <div id="country">
+                <input
+                  type="radio"
+                  name="country"
+                  id="countryKorea"
+                  value="countryKorea"
+                />
+                <label for="countryKorea">한식</label>
+                <input
+                  type="radio"
+                  name="country"
+                  id="countryJapan"
+                  value="countryJapan"
+                />
+                <label for="countryJapan">일식</label>
+                <input
+                  type="radio"
+                  name="country"
+                  id="countryChina"
+                  value="countryChina"
+                />
+                <label for="countryChina">중식</label>
+                <input
+                  type="radio"
+                  name="country"
+                  id="countryWestern"
+                  value="countryWestern"
+                />
+                <label for="countryWestern">양식</label>
+              </div>
+              <div id="foodType">
+                <input
+                  type="radio"
+                  name="foodType"
+                  value="typeNoodle"
+                  id="typeNoodle"
+                />
+                <label for="typeNoodle">면 요리</label>
+                <input
+                  type="radio"
+                  name="foodType"
+                  value="typeMeal"
+                  id="typeMeal"
+                />
+                <label for="typeMeal">식사 요리</label>
+                <input
+                  type="radio"
+                  name="foodType"
+                  value="typeSoup"
+                  id="typeSoup"
+                />
+                <label for="typeSoup">탕·스프 요리</label>
+              </div>
+            </div>
+            <div id="foodResult">
+              <div>
+                <p>오늘은 <span id="food"></span> 먹자!</p>
+                <button onclick="getFood()">음식을 고르자!</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
