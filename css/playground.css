@@ -178,13 +178,13 @@ h2 {
 }
 
 #grade > .content {
-  height: 550px;
+  height: 600px;
 }
 
 #gradeDiv {
   display: flex;
   width: 700px;
-  height: 500px;
+  height: 570px;
   background-color: antiquewhite;
 }
 
@@ -286,7 +286,7 @@ input:focus {
 .innerDiv {
   margin: 30px auto;
   width: 80%;
-  height: 440px;
+  height: 530px;
   background-color: rgb(253, 244, 232);
 }
 
@@ -424,3 +424,7 @@ input:focus {
   color: #060b13;
   cursor: pointer;
 }
+
+/* #firstGraph {
+  margin: 90px 0;
+} */

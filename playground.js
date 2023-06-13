@@ -194,10 +194,10 @@ initial = () => {
     {
       number: '2017H1311',
       name: '멍청이',
-      major: 10,
-      subject: 0,
-      totalGrade: 10,
-      average: (10).toFixed(2),
+      major: 30,
+      subject: 20,
+      totalGrade: 50,
+      average: (25).toFixed(2),
     },
     {
       number: '2018H1223',
@@ -210,10 +210,10 @@ initial = () => {
     {
       number: '2023H1102',
       name: '신입생',
-      major: 90,
-      subject: 100,
-      totalGrade: 190,
-      average: (95).toFixed(2),
+      major: 70,
+      subject: 80,
+      totalGrade: 150,
+      average: (75).toFixed(2),
     },
   ]
 
@@ -283,16 +283,13 @@ deleteData = () => {
   const modifyForm = document.getElementById('modifying')
   if (confirm('삭제하시겠습니까?')) {
     localStorage.removeItem(studentNum.value)
-    alert(`${studentNum.value}의 데이터가 삭제되었습니다.`)
     checkForm.style.display = 'block'
     modifyForm.style.display = 'none'
     stuNum.value = null
   }
 }
 
-let myChart = null
-function firstGraph() {
-  const ctx = document.getElementById('firstGraph').getContext('2d')
+function config(type) {
   const keyValues = getLocalKeys()
   const name = []
   const avg = []
@@ -301,7 +298,7 @@ function firstGraph() {
     avg.push(obj.average)
   })
   let config = {
-    type: 'bar',
+    type: type,
     data: {
       labels: name,
       datasets: [
@@ -330,16 +327,62 @@ function firstGraph() {
         },
       ],
     },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
+  }
+  return config
+}
+let myChart = null
+verticalGraph = () => {
+  const ctx = document.getElementById('firstGraph').getContext('2d')
+  const configuration = config('bar')
+  const option = {
+    scales: {
+      y: {
+        beginAtZero: true,
       },
     },
   }
+  Object.assign(configuration, { options: option })
   if (myChart != null) {
     myChart.destroy()
   }
-  myChart = new Chart(ctx, config)
+  myChart = new Chart(ctx, configuration)
+}
+
+horizonGraph = () => {
+  const ctx = document.getElementById('firstGraph').getContext('2d')
+  const configuration = config('bar')
+  const option = {
+    indexAxis: 'y',
+  }
+
+  Object.assign(configuration, { options: option })
+  if (myChart != null) {
+    myChart.destroy()
+  }
+  myChart = new Chart(ctx, configuration)
+}
+doughnutGraph = () => {
+  const ctx = document.getElementById('firstGraph').getContext('2d')
+  const configuration = config('doughnut')
+  const option = {
+    // cutout: 50,
+    // radius: 120,
+  }
+
+  Object.assign(configuration, { options: option })
+  if (myChart != null) {
+    myChart.destroy()
+  }
+  myChart = new Chart(ctx, configuration)
+}
+circleGraph = () => {
+  const ctx = document.getElementById('firstGraph').getContext('2d')
+  const configuration = config('polarArea')
+  const option = {}
+
+  Object.assign(configuration, { options: option })
+  if (myChart != null) {
+    myChart.destroy()
+  }
+  myChart = new Chart(ctx, configuration)
 }

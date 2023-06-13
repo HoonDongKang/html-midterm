@@ -225,9 +225,9 @@
                             </tr>
                             <tr>
                               <td>전공 점수 :</td>
-                              <td class="dummAns">10</td>
+                              <td class="dummAns">30</td>
                               <td>교양 점수 :</td>
-                              <td class="dummAns">0</td>
+                              <td class="dummAns">20</td>
                             </tr>
                           </tbody>
                         </table>
@@ -261,9 +261,9 @@
                             </tr>
                             <tr>
                               <td>전공 점수 :</td>
-                              <td class="dummAns">90</td>
+                              <td class="dummAns">70</td>
                               <td>교양 점수 :</td>
-                              <td class="dummAns">100</td>
+                              <td class="dummAns">80</td>
                             </tr>
                           </tbody>
                         </table>
@@ -272,7 +272,15 @@
                   </div>
                 </div>
                 <div id="firstGraphMenu" class="toggle">
-                  <canvas id="firstGraph"></canvas>
+                  <div class="innerDiv" style="width: 90%">
+                    <div id="resultBtn">
+                      <button onclick="verticalGraph()">수직형</button>
+                      <button onclick="horizonGraph()">수평형</button>
+                      <button onclick="doughnutGraph()">도넛형</button>
+                      <button onclick="circleGraph()">원형</button>
+                    </div>
+                    <canvas id="firstGraph"></canvas>
+                  </div>
                 </div>
                 <div id="secondGraphMenu" class="toggle">g2</div>
               </div>
@@ -285,10 +293,9 @@
                 <button class="menuBtn" id="init" onclick="initial()">
                   - 초기화 -
                 </button>
-                <button class="menuBtn" id="g1" onclick="firstGraph()">
-                  - 그래프 1 -
+                <button class="menuBtn" id="g1" onclick="verticalGraph()">
+                  - 그래프 -
                 </button>
-                <button class="menuBtn" id="g2">- 그래프 2 -</button>
               </div>
             </div>
           </div>
