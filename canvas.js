@@ -248,6 +248,12 @@ function handleSaveClick() {
   link.click()
 }
 
+function handleClearClick() {
+  const canvas = document.getElementById('drawCanvas')
+  const context = canvas.getContext('2d')
+  context.clearRect(0, 0, 400, 300)
+}
+
 getLocalKeys = () => {
   const keyValues = []
 

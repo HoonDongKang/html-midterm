@@ -15,6 +15,7 @@
     <div class="body">
       <nav class="floating-menu">
         <h3>바로가기</h3>
+        <li href="#" class="floating">GuGuDan</li>
         <li href="#" class="floating">Canvas</li>
         <li href="#" class="floating">Drawing</li>
         <li href="#" class="floating">Grade</li>
@@ -56,6 +57,12 @@
         </div>
       </nav>
       <div class="bodyContainer">
+        <div id="gugudan" class="container">
+          <div class="title"><h2>구구단</h2></div>
+          <div class="content">
+            <div id="guguDiv"></div>
+          </div>
+        </div>
         <div id="canvas" class="container">
           <div class="title"><h2>텍스트 그리기</h2></div>
           <div class="content">
@@ -100,6 +107,9 @@
               <div class="drawingColor" style="background-color: blue"></div>
               <div class="drawingColor" style="background-color: purple"></div>
               <button id="saveBtn" onclick="handleSaveClick()">저장하기</button>
+              <button id="clearBtn" onclick="handleClearClick()">
+                전체지우기
+              </button>
             </div>
             <script>
               init()
@@ -145,6 +155,39 @@
                     <div id="resultList"></div>
                   </div>
                 </div>
+                <div id="searchMenu" class="toggle">
+                  <div class="innerDiv">
+                    <div id="searching">
+                      <span>조회할 학번을 적어주세요</span>
+                      <div id="checkNumber">
+                        <label>학번:</label
+                        ><input id="searchStuNum" type="text" required />
+                      </div>
+                      <button id="checkBtn" onclick="showStuNum()">확인</button>
+                    </div>
+                    <div id="showing">
+                      <form id="showingForm">
+                        <div>
+                          <label>학번:</label
+                          ><input id="showNum" type="text" disabled />
+                        </div>
+                        <div>
+                          <label>이름:</label>
+                          <input id="showName" type="text" disabled />
+                        </div>
+                        <div>
+                          <label>전공 성적:</label>
+                          <input id="showMajor" type="number" disabled />
+                        </div>
+                        <div>
+                          <label>교양 성적:</label>
+                          <input id="showSubject" type="number" disabled />
+                        </div>
+                      </form>
+                      <button id="checkBtn" onclick="prvBtn()">이전으로</button>
+                    </div>
+                  </div>
+                </div>
                 <div id="controlMenu" class="toggle">
                   <div class="innerDiv">
                     <div id="checking">
@@ -157,6 +200,7 @@
                         확인
                       </button>
                     </div>
+
                     <div id="modifying">
                       <div>
                         <button id="deleteGrade" onclick="deleteData()">
@@ -289,6 +333,9 @@
               </div>
               <div class="formContent" id="gradeMenu">
                 <button class="menuBtn" id="save">- 성적입력 -</button>
+                <button class="menuBtn" id="search" onclick="verticalGraph()">
+                  - 조회하기 -
+                </button>
                 <button class="menuBtn" id="list" onclick="getListByGrade()">
                   - 전체보기 -
                 </button>

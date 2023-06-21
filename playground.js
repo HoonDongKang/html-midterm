@@ -1,3 +1,27 @@
+const guguDiv = document.getElementById('guguDiv')
+let script = `<table border=1>`
+
+for (let i = 9; i >= 7; i--) {
+  for (let j = 1; j <= 9; j++) {
+    script += `<tr>`
+    for (let k = 0; k < 3; k++) {
+      x = i - k * 3
+      script +=
+        '<td style="width:100px; text-align:center">' +
+        x +
+        ' * ' +
+        j +
+        ' = ' +
+        x * j +
+        '</td>'
+    }
+    script += `</tr>`
+  }
+}
+script += `</table>`
+
+guguDiv.innerHTML = script
+
 getLocalKeys = () => {
   const keyValues = []
 
@@ -71,7 +95,7 @@ menuClick = (event) => {
   const controlMenu = document.getElementById('controlMenu')
   const initializeMenu = document.getElementById('initializeMenu')
   const firstGraphMenu = document.getElementById('firstGraphMenu')
-  const secondGraphMenu = document.getElementById('secondGraphMenu')
+  const searchMenu = document.getElementById('searchMenu')
 
   toggles.forEach((toggle) => {
     toggle.style.display = 'none'
@@ -92,8 +116,8 @@ menuClick = (event) => {
     case 'g1':
       firstGraphMenu.style.display = 'block'
       break
-    case 'g2':
-      secondGraphMenu.style.display = 'block'
+    case 'search':
+      searchMenu.style.display = 'block'
       break
   }
 }
@@ -226,6 +250,37 @@ initial = () => {
     }
   }
 }
+prvBtn = () => {
+  const checkForm = document.getElementById('searching')
+  const showForm = document.getElementById('showing')
+  const stuNum = document.getElementById('searchStuNum')
+  checkForm.style.display = 'block'
+  showForm.style.display = 'none'
+  stuNum.value = null
+}
+showStuNum = () => {
+  const stuNum = document.getElementById('searchStuNum')
+  const checkForm = document.getElementById('searching')
+  const showForm = document.getElementById('showing')
+  const studentNum = document.getElementById('showNum')
+  const studentName = document.getElementById('showName')
+  const major = document.getElementById('showMajor')
+  const subject = document.getElementById('showSubject')
+  const keyValues = getLocalKeys()
+
+  const data = keyValues.find((key) => key.number == stuNum.value)
+
+  if (data) {
+    checkForm.style.display = 'none'
+    showForm.style.display = 'block'
+    studentNum.value = data.number
+    studentName.value = data.name
+    major.value = data.major
+    subject.value = data.subject
+  } else {
+    alert('등록된 학번이 없는뎁쇼')
+  }
+}
 
 checkStuNum = () => {
   const stuNum = document.getElementById('chceckStuNum')
@@ -235,9 +290,10 @@ checkStuNum = () => {
   const studentName = document.getElementById('modifyName')
   const major = document.getElementById('modifyMajor')
   const subject = document.getElementById('modifySubject')
-
   const keyValues = getLocalKeys()
+
   const data = keyValues.find((key) => key.number == stuNum.value)
+
   if (data) {
     checkForm.style.display = 'none'
     modifyForm.style.display = 'block'
@@ -287,6 +343,10 @@ deleteData = () => {
   const modifyForm = document.getElementById('modifying')
   if (confirm('삭제하시겠습니까?')) {
     localStorage.removeItem(studentNum.value)
+    checkForm.style.display = 'block'
+    modifyForm.style.display = 'none'
+    stuNum.value = null
+  } else {
     checkForm.style.display = 'block'
     modifyForm.style.display = 'none'
     stuNum.value = null
